@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
+import matter from 'gray-matter';
 
 const Navbar: React.FC = () => {
     // Read portfolio files from md directory
@@ -15,7 +16,10 @@ const Navbar: React.FC = () => {
             .filter(file => file.endsWith('_portfolio.md'))
             .map(file => {
                 const slug = file.replace('_portfolio.md', '').toLowerCase();
-                const title = file.replace('_portfolio.md', '');
+                const filePath = path.join(mdDir, file);
+                const fileContent = fs.readFileSync(filePath, 'utf-8');
+                const { data } = matter(fileContent);
+                const title = data.title || file.replace('_portfolio.md', '');
                 return { slug, title };
             });
 

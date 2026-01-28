@@ -82,12 +82,18 @@ a {
 }
 
 /* Embedded iframe styles */
+.embedded-iframe-wrapper {
+  position: relative;
+  width: 100%;
+  margin: var(--spacing-lg) 0;
+}
+
 .embedded-iframe-container {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   border: var(--border-thick);
   box-shadow: var(--shadow-hard);
-  margin: var(--spacing-lg) 0;
   overflow: hidden;
 }
 

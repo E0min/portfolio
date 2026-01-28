@@ -42,19 +42,27 @@ export default async function PortfolioPage({ params }: { params: Promise<{ slug
             /IFRAME_SQUARE:(.+)/g,
             (match, url) => {
                 const trimmedUrl = url.trim();
-                return `<div class="embedded-iframe-container square"><iframe src="${trimmedUrl}" class="embedded-iframe" title="Live Preview"></iframe></div>`;
+                return `<div class="embedded-iframe-wrapper square">
+                    <div class="embedded-iframe-container square">
+                        <iframe src="${trimmedUrl}" class="embedded-iframe" title="Live Preview"></iframe>
+                    </div>
+                </div>`;
             }
         )
         .replace(
             /IFRAME:(.+)/g,
             (match, url) => {
                 const trimmedUrl = url.trim();
-                return `<div class="embedded-iframe-container"><iframe src="${trimmedUrl}" class="embedded-iframe" title="Live Preview"></iframe></div>`;
+                return `<div class="embedded-iframe-wrapper">
+                    <div class="embedded-iframe-container">
+                        <iframe src="${trimmedUrl}" class="embedded-iframe" title="Live Preview"></iframe>
+                    </div>
+                </div>`;
             }
         );
 
     return (
-        <main style={{ padding: 'var(--spacing-xl) var(--spacing-md)', maxWidth: '900px', margin: '0 auto' }}>
+        <main style={{ padding: 'var(--spacing-xl) var(--spacing-md)', maxWidth: '1400px', margin: '0 auto' }}>
             <div className="portfolio-content">
                 <ReactMarkdown
                     rehypePlugins={[rehypeRaw]}
