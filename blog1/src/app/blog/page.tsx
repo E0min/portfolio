@@ -1,6 +1,5 @@
-import Navbar from "@/components/Navbar";
-import Card from "@/components/Card";
-import Button from "@/components/Button";
+import Card from "@/components/card";
+import Button from "@/components/button";
 import Link from "next/link";
 
 const POSTS = [
@@ -12,7 +11,6 @@ const POSTS = [
 export default function BlogListing() {
     return (
         <main>
-            <Navbar />
             <div style={{ padding: 'var(--spacing-xl) var(--spacing-md)', maxWidth: '1000px', margin: '0 auto' }}>
                 <h1 style={{
                     fontSize: '3rem',

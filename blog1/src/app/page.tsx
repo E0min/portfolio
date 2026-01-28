@@ -1,12 +1,10 @@
-import Navbar from "@/components/Navbar";
-import Button from "@/components/Button";
-import Card from "@/components/Card";
 import Link from "next/link";
+import Button from "@/components/button";
+import Card from "@/components/card";
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
 
       <header style={{
         padding: 'var(--spacing-xl) var(--spacing-md)',
@@ -24,7 +22,7 @@ export default function Home() {
           fontWeight: '900',
           textTransform: 'uppercase',
           maxWidth: '800px',
-          textShadow: '4px 4px 0px var(--accent-pink)'
+          textShadow: '4px 4px 0px #000000'
         }}>
           Simplicity is the Ultimate Sophistication
         </h1>
@@ -35,13 +33,13 @@ export default function Home() {
           <Link href="/blog">
             <Button>Read My Thoughts</Button>
           </Link>
-          <Link href="/about">
-            <Button variant="secondary" style={{ backgroundColor: '#fff' }}>Who am I?</Button>
+          <Link href="/resume">
+            <Button variant="secondary" style={{ backgroundColor: '#fff' }}>Resume</Button>
           </Link>
         </div>
       </header>
 
-      <section style={{ padding: 'var(--spacing-xl) var(--spacing-md)', background: 'var(--accent-blue)' }}>
+      <section style={{ padding: 'var(--spacing-xl) var(--spacing-md)', borderTop: 'var(--border-thick)' }}>
         <h2 style={{
           fontSize: '2.5rem',
           marginBottom: 'var(--spacing-lg)',

@@ -1,17 +1,17 @@
 :root {
-  /* Neo-Brutalism Palette */
+  /* Neo-Brutalism Mono Palette */
   --bg-color: #ffffff;
   --text-main: #000000;
-  --accent-pink: #FF90E8;
-  --accent-yellow: #FFF01F;
-  --accent-blue: #23C1FF;
-  
+  --accent-pink: #000000;
+  --accent-yellow: #ffffff;
+  --accent-blue: #ffffff;
+
   /* Borders & Shadows */
   --border-thick: 3px solid #000000;
   --border-thin: 1px solid #000000;
   --shadow-hard: 5px 5px 0px 0px #000000;
   --shadow-hover: 2px 2px 0px 0px #000000;
-  
+
   /* Spacing */
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -28,8 +28,10 @@ body {
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace; /* Raw, brutal monospaced feel */
-  -webkit-font-smoothing: none; /* Crisper text for retro feel */
+  font-family: 'Courier New', Courier, monospace;
+  /* Raw, brutal monospaced feel */
+  -webkit-font-smoothing: none;
+  /* Crisper text for retro feel */
 }
 
 * {
@@ -58,7 +60,7 @@ a {
 }
 
 .neo-button {
-  background: var(--accent-pink);
+  background: #ffffff;
   color: var(--text-main);
   border: var(--border-thick);
   box-shadow: var(--shadow-hard);
@@ -69,7 +71,32 @@ a {
   transition: all 0.1s;
 }
 
+.neo-button:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
 .neo-button:active {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0px 0px #000000;
+}
+
+/* Embedded iframe styles */
+.embedded-iframe-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
+  margin: var(--spacing-lg) 0;
+  overflow: hidden;
+}
+
+.embedded-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.embedded-iframe-container.square {
+  aspect-ratio: 1 / 1;
 }

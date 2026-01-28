@@ -1,5 +1,4 @@
-import Navbar from "@/components/Navbar";
-import Button from "@/components/Button";
+import Button from "@/components/button";
 import Link from "next/link";
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
@@ -7,7 +6,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
     return (
         <main>
-            <Navbar />
             <article style={{ padding: 'var(--spacing-xl) var(--spacing-md)', maxWidth: '800px', margin: '0 auto' }}>
                 <Link href="/blog">
                     <Button variant="secondary" style={{ marginBottom: 'var(--spacing-md)', fontSize: '0.9rem' }}>← Back to Blog</Button>
@@ -37,6 +35,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                         border: 'var(--border-thin)',
                         padding: 'var(--spacing-md)',
                         backgroundColor: 'var(--accent-pink)',
+                        color: '#ffffff',
                         fontWeight: 'bold',
                         marginTop: 'var(--spacing-lg)'
                     }}>

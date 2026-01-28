@@ -1,10 +1,8 @@
-import Navbar from "@/components/Navbar";
-import Card from "@/components/Card";
+import Card from "@/components/card";
 
 export default function About() {
     return (
         <main>
-            <Navbar />
             <div style={{ padding: 'var(--spacing-xl) var(--spacing-md)', maxWidth: '800px', margin: '0 auto' }}>
                 <h1 style={{
                     fontSize: '3rem',
