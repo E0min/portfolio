@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Neo-Brutal Portfolio",
+  title: "Portfolio",
   description: "A raw, high-contrast, honest developer portfolio.",
 };
 
