@@ -1,0 +1,405 @@
+/* Header */
+.section-header {
+    padding: 0px 1.0417vw;
+    background: #fff;
+    margin-bottom: 2.0833vw;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3.1250vw;
+    gap: 4.4792vw;
+}
+
+.site-title {
+    font-family: 'Oswald', sans-serif;
+    color: #C45481;
+    /* Pink color */
+    font-size: 2.5000vw;
+    font-weight: 300;
+    text-decoration: underline;
+    text-underline-offset: 0.2604vw;
+    padding: 1.0417vw 0.0000vw;
+}
+
+.mini-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.mini-nav a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    /* 18px */
+    font-weight: 200;
+    color: #C45481;
+    text-decoration: none;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.page-title-svg {
+    width: 37.3438vw;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5625vw;
+    margin-bottom: 0.5208vw;
+}
+
+
+
+.view-toggle {
+    display: flex;
+    gap: 2.8646vw;
+    align-items: center;
+}
+
+.view-icon {
+    width: 9.7917vw;
+    height: 9.7917vw;
+    cursor: pointer;
+}
+
+.section-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 6.6667vw;
+    font-weight: 500;
+    margin-bottom: 1.0417vw;
+    color: #2B2929;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.right-align {
+    text-align: right;
+    width: 100%;
+    line-height: normal;
+}
+
+/* Hotgirls Grid (3-Column Flex) */
+.hotgirls-three-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5.2083vw;
+    padding: 0 1.0417vw;
+    gap: 1.0417vw;
+}
+
+.hg-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0417vw;
+    flex: 534;
+    /* Ratio based on width */
+    min-width: 0;
+    /* Prevent flex blowout */
+}
+
+.hg-col.center {
+    flex: 775;
+    /* Ratio based on width */
+}
+
+.hg-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Aspect Ratio helpers for responsive height */
+.portrait-tall {
+    aspect-ratio: 534 / 771;
+    height: auto;
+}
+
+.landscape {
+    aspect-ratio: 534 / 400;
+    /* Default side landscape ratio */
+    height: auto;
+}
+
+/* Center column landscape items might need different ratio if not 534/400?
+   User said "gap is auto", implying heights might vary or be fixed.
+   If center col is 40.3646vw wide, a 20.8333vw height gives ratio ~1.93.
+   Let's check if .landscape is applied to center items. Yes.
+   So we need a specific rule for center column landscape items. */
+.hg-col.center .landscape {
+    aspect-ratio: 775 / 400;
+}
+
+.hg-item .placeholder-img {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 0.7292vw;
+    object-fit: cover;
+}
+
+.hg-caption {
+    position: absolute;
+    bottom: 0.5208vw;
+    left: 0.5208vw;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.6250vw;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.1042vw 0.2604vw;
+}
+
+/* AllFilms Grid */
+.allfilms-grid-sec {
+    margin-bottom: 5.2083vw;
+}
+
+.films-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.0417vw;
+    row-gap: 7.0312vw;
+    margin-top: 1.0417vw;
+}
+
+.film-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2604vw;
+}
+
+.film-card .placeholder-img {
+    height: 19.9479vw;
+    background: #e5e5e5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4688vw;
+}
+
+.film-card .rect-small {
+    width: 100%;
+    /* Override home.css fixed width if reused */
+}
+
+.film-title {
+    font-family: 'Oswald';
+    font-size: 1.6667vw;
+    font-weight: light;
+    text-transform: uppercase;
+}
+
+/* Text List Section */
+.text-list-sec {
+    position: relative;
+    padding: 0;
+    margin-bottom: 5.2083vw;
+}
+
+.large-text-list {
+    list-style: none;
+    margin-bottom: 2.0833vw;
+}
+
+.large-text-list li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 6.6667vw;
+    font-weight: 500;
+    /* Assuming Medium based on look */
+    line-height: 0.9;
+    color: #2B2929;
+    cursor: pointer;
+    transition: color 0.2s;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.0417vw;
+    /* Increased spacing */
+    position: relative;
+    z-index: 2;
+    /* Text above image */
+}
+
+.large-text-list li:hover {
+    color: #000;
+}
+
+.large-text-list li sup {
+    font-size: 1.2500vw;
+    font-weight: 500;
+    color: #2B2929;
+    vertical-align: super;
+    margin-left: 0.5208vw;
+}
+
+.show-more {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6667vw;
+    font-weight: 500;
+    margin-top: 1.5625vw;
+    cursor: pointer;
+    color: #2B2929;
+    display: flex;
+    align-items: center;
+    gap: 0.5208vw;
+    position: relative;
+    z-index: 2;
+}
+
+.plus-icon {
+    font-size: 2.0833vw;
+    font-weight: 300;
+    line-height: 0.8;
+}
+
+.list-hover-img {
+    position: absolute;
+    top: 50%;
+    right: 1.0417vw;
+    transform: translateY(-50%);
+    width: 57.292vw;
+    /* 1100 / 1920 */
+    height: auto;
+    aspect-ratio: 1100 / 860;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-hover-img .placeholder-img {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    /* Placeholder color */
+    object-fit: cover;
+}
+
+/* Hidden class for toggle */
+.hidden {
+    display: none !important;
+}
+
+/* List View Styles */
+#view-list {
+    width: 100%;
+    margin-bottom: 5.2083vw;
+    /* 100px */
+}
+
+.list-view-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.list-row {
+    display: flex;
+    align-items: center;
+    padding: 1.5625vw 0;
+    /* ~30px vertical padding */
+    border-bottom: 1px solid #ECECEC;
+}
+
+.list-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title Column */
+.list-col.title {
+    flex: 2;
+    /* Takes more space */
+    margin-right: 42.7083vw;
+    /* 820px gap */
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.6042vw;
+    /* 50px */
+    font-weight: 600;
+    /* SemiBold */
+    letter-spacing: -0.04em;
+    color: #000;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Meta Columns (Director, Genre, Date) */
+.list-col.meta {
+    flex: 1;
+    gap: 5px;
+    /* 5px gap between label and value */
+}
+
+.list-col.meta .label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9vw;
+    /* 13px */
+    font-weight: 500;
+    /* Medium */
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    /* 5% */
+    line-height: normal;
+}
+
+.list-col.meta .value {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7vw;
+    /* 14px inferred, or maybe same as label? Screenshot value looks slightly larger or same. Let's go with 14px */
+    font-weight: 200;
+    /* Regular */
+    color: #000;
+    line-height: normal;
+}
+
+/* Cursor Follow Image */
+#cursor-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 56px;
+    /* 56W 19H? No, that's small. Wait, user screenshot showed 56x19 for something else (text?). Image should be poster size. Let's guess ~200px equivalent */
+    /* Let's use 10vw width (approx 192px at 1920) */
+    width: 10vw;
+    height: auto;
+    aspect-ratio: 2/3;
+    /* Traditional poster ratio */
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    /* transform: translate(-50%, -50%); handled in JS or helpful to center */
+}
+
+#cursor-img .placeholder-img {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1vw;
+}
+/* Neo-Brutalism Scrollbar */
+::-webkit-scrollbar { width: 16px; height: 16px; background: #ffffff; border-left: 3px solid #000000; border-top: 3px solid #000000; }
+::-webkit-scrollbar-track { background: #ffffff; }
+::-webkit-scrollbar-thumb { background: #000000; border: 3px solid #ffffff; box-shadow: inset -2px -2px 0px 0px rgba(255, 255, 255, 0.5); }
+::-webkit-scrollbar-thumb:hover { background: #FF0000; }
+::-webkit-scrollbar-corner { background: #ffffff; border: 3px solid #000000; }

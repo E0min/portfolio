@@ -76,7 +76,11 @@ export default async function PortfolioPage({ params }: { params: Promise<{ slug
                     </div>
                 </div>`;
             }
-        );
+        )
+        // Fix for intraword bolding (e.g. **text**text)
+        // We inject a zero-width space &#8203; which acts as a separator for the parser
+        // but is invisible to the user.
+        .replace(/\*\*([^*]+)\*\*(?=[^\s])/g, '**$1**&#8203;');
 
     return (
         <main style={{ padding: 'var(--spacing-xl) var(--spacing-md)', maxWidth: '1400px', margin: '0 auto' }}>
@@ -89,8 +93,10 @@ export default async function PortfolioPage({ params }: { params: Promise<{ slug
                             <img
                                 {...props}
                                 style={{
-                                    maxWidth: '100%',
+                                    width: '70%',
                                     height: 'auto',
+                                    display: 'block',
+                                    margin: '0 auto',
                                     border: 'var(--border-thick)',
                                     boxShadow: 'var(--shadow-hard)',
                                     marginBottom: 'var(--spacing-lg)'
@@ -164,6 +170,8 @@ export default async function PortfolioPage({ params }: { params: Promise<{ slug
                         th: ({ node, ...props }) => <th style={{ padding: 'var(--spacing-sm)', textAlign: 'left', fontWeight: 'bold', border: '1px solid #000' }} {...props} />,
                         td: ({ node, ...props }) => <td style={{ padding: 'var(--spacing-sm)', border: '1px solid #000' }} {...props} />,
                         blockquote: ({ node, ...props }) => <blockquote style={{ borderLeft: '4px solid #000', paddingLeft: 'var(--spacing-md)', color: '#666', fontStyle: 'italic', margin: 'var(--spacing-md) 0' }} {...props} />,
+                        strong: ({ node, ...props }) => <strong style={{ fontWeight: 'bold' }} {...props} />,
+                        b: ({ node, ...props }) => <b style={{ fontWeight: 'bold' }} {...props} />,
                     }}
                 >
                     {processedContent}

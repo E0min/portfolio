@@ -14,4 +14,4 @@ title: "RECAP FESTIVAL"
 
 ## 라이브 프리뷰
 
-IFRAME:/portfolio/design1/index.html
+IFRAME:/Design_source/design1/index.html

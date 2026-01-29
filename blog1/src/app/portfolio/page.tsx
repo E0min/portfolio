@@ -78,7 +78,7 @@ export default function PortfolioListing() {
                                 </ReactMarkdown>
                             </div>
                             <Link href={`/portfolio/${post.slug}`}>
-                                <Button style={{ width: '100%' }}>Open Folder_</Button>
+                                <Button>Open Folder_</Button>
                             </Link>
                         </Folder>
                     ))}

@@ -1,0 +1,800 @@
+/* Global Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Wrapper for Content (below hero) */
+.content-wrapper {
+    max-width: 1920px;
+    /* Expanded for wide cards */
+    margin: 0 20px;
+    /* L/R 20px */
+    padding: 0px;
+}
+
+/* Base Typography */
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 62px;
+    margin: 0;
+    padding: 0 20px;
+    color: #111;
+    letter-spacing: 0.5px;
+}
+
+/* =========================================
+   1. Hero Section
+   ========================================= */
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0;
+    /* Full viewport */
+    background: #000;
+    overflow: hidden;
+    color: #fff;
+    cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 4V20M12 20L5 13M12 20L19 13' stroke='white' stroke-width='1.5' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E") 16 24, auto;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    /* Slight dim for text readability if needed */
+}
+
+/* Nav */
+/* Nav */
+.center-nav {
+    position: absolute;
+    bottom: 108px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 40px;
+}
+
+.center-nav a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    color: #ECECEC;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+/* Hero Title List (Bottom Left) */
+.hero-content {
+    position: absolute;
+    bottom: 140px;
+    left: 47px;
+    z-index: 10;
+}
+
+.hero-title-list li {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.5rem;
+    /* Massive size */
+    line-height: 0.85;
+    /* Tight stacking */
+    color: #AA0C1C;
+    /* The specific Red */
+    opacity: 0.9;
+    letter-spacing: -1px;
+    transition: transform 0.3s;
+    cursor: default;
+}
+
+.hero-title-list li span {
+    font-family: 'Oswald', sans-serif;
+    color: #ECECEC;
+    opacity: 0.67;
+    font-size: 17px;
+    vertical-align: super;
+    /* Superscript feel */
+    margin-left: 8px;
+    letter-spacing: 0;
+    /* Additional tweaks for exact visual placement if needed */
+    position: relative;
+    top: -5px;
+}
+
+.hero-title-list li:hover {
+    transform: translateX(20px);
+}
+
+/* Optional: Highlight one item like in design */
+.hero-title-list li.active {
+    /* text-decoration: underline; or brighter color */
+}
+
+/* Scroll Arrow */
+.scroll-arrow {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    z-index: 10;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* =========================================
+   GENERIC PLACEHOLDERS
+   ========================================= */
+.placeholder-img {
+    background-color: #e5e5e5;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.ph-text {
+    z-index: 1;
+}
+
+/* Aspect Ratios */
+.rect-large {
+    width: 939px;
+    height: 574px;
+    border-radius: 9px;
+}
+
+.rect-small {
+    width: 503px;
+    height: 335px;
+}
+
+.banner {
+    height: 500px;
+    width: 100%;
+}
+
+.portrait {
+    height: 100%;
+    width: 100%;
+    min-height: 500px;
+}
+
+.circle-fill {
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+}
+
+/* =========================================
+   2. All Films
+   ========================================= */
+.section {
+    margin-top: 148px;
+    margin-bottom: 0px;
+}
+
+.grid-2-col {
+    display: grid;
+    grid-template-columns: repeat(2, 939px);
+    gap: 6px;
+    justify-content: center;
+}
+
+.card-info {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Oswald', sans-serif;
+    color: #000000;
+}
+
+.card-year {
+    color: #888;
+    font-size: 13px;
+}
+
+/* =========================================
+   3. Notes (Carousel)
+   ========================================= */
+.notes-carousel {
+    position: relative;
+    width: 100%;
+    /* Break out of parent to the right */
+    /* Assuming parent has 20px margin, we want to extend right to viewport edge */
+    /* A simple way is to allow overflow-x and make sure child is wide */
+    overflow-x: auto;
+    padding-bottom: 20px;
+    /* Space for scrollbar or shadow */
+    /* Ensure scrollbar hidden if preferred? User implied standard carousel behavior */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.notes-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    /* Allow content to dictate width */
+    padding-right: 40px;
+    /* Right padding for end of scroll */
+}
+
+.carousel-item {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.slide-img {
+    display: block;
+    width: 1038px;
+    height: 750px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 8rem;
+    color: #fff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    line-height: 1;
+}
+
+.slide-info {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+}
+
+.release-info {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 15px;
+    /* Spacing */
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.year-bg {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.slide-placeholder {
+    width: 300px;
+    /* Peek width */
+    height: 100%;
+    min-height: 500px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+}
+
+/* =========================================
+   4. Collections
+   ========================================= */
+.collections-container {
+    display: flex;
+    min-height: 600px;
+}
+
+.pink-card {
+    background-color: #EC71DA;
+    /* Neon Pink */
+    flex: 1.2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 9px;
+}
+
+.role-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.name-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 160px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #000;
+}
+
+.photo-card {
+    flex: 1;
+    background: #000;
+}
+
+/* =========================================
+   5. Award Winners
+   ========================================= */
+.grid-4-col {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+    /* Space for specific scrollbar if needed */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.grid-4-col::-webkit-scrollbar {
+    display: none;
+}
+
+.card-caption {
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+}
+
+.award-icon {
+    font-size: 10px;
+}
+
+/* =========================================
+   6. About
+   ========================================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1.5fr;
+    gap: 20px;
+    border-top: none;
+    /* Removed top border */
+    padding-top: 40px;
+}
+
+.about-card {
+    border: 1px solid #EAEAEA;
+    border-radius: 9px;
+    padding: 30px;
+    height: 400px;
+    /* Fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.about-card h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Bottom Content in Cards */
+.card-bottom {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.vertical-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vertical-links a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Mean Content */
+.mean-content p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.mean-content strong {
+    font-weight: 700;
+}
+
+.kr-desc {
+    color: #333;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* Social Sub-grid */
+.social-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+}
+
+.social-row {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+.social-card {
+    flex: 1;
+    border: 1px solid #EAEAEA;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    /* Large icons */
+    color: #000;
+    transition: background 0.2s;
+    cursor: pointer;
+    background: #fff;
+}
+
+.social-card:hover {
+    background: #f9f9f9;
+}
+
+/* =========================================
+   7. Footer
+   ========================================= */
+.main-footer {
+    padding: 150px 0 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.men-svg {
+    height: 540px;
+    width: auto;
+    display: block;
+}
+
+/* The vertical pill image */
+.footer-pill {
+    width: 450px;
+    height: 540px;
+    border-radius: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 692px;
+    /* Calculated to sit in the gap between E and N */
+    margin: 0;
+    /* Remove margins */
+    transform: none;
+}
+
+.footer-img-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.footer-pill-text span:first-child {
+    font-weight: 700;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-pill-text span:last-child {
+    font-weight: 300;
+    font-size: 0.8vw;
+    opacity: 0.9;
+}
+/* =========================================
+   8. ALL FILMS PAGE STYLES
+   ========================================= */
+
+/* Header */
+.section-header {
+    padding: 20px 40px;
+    background: #fff;
+    margin-bottom: 40px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.site-title {
+    font-family: 'Oswald', sans-serif;
+    color: #EA71DA; /* Pink color from design */
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.mini-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.mini-nav a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    color: #EA71DA;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.page-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 96px;
+    line-height: 0.9;
+    color: #111;
+    margin: 0;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.arrow-down {
+    color: #EA71DA;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 15px;
+    color: #ccc;
+    font-size: 24px;
+}
+
+.section-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.right-align {
+    text-align: right;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    line-height: 0.8;
+}
+
+/* Hotgirls Grid (Masonry-ish Layout) */
+.hotgirls-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 100px;
+}
+
+.hg-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Specific item sizing based on visual estimation */
+.item-1 { grid-column: span 1; height: 400px; }
+.item-2 { grid-column: span 2; height: 400px; }
+
+.item-3 { grid-column: span 1; height: 600px; grid-row: span 2; } /* Tall portrait */
+.item-4 { grid-column: span 2; height: 300px; } /* Wide landscape */
+
+.item-5 { grid-column: span 1; height: 300px; }
+.item-6 { grid-column: span 1; height: 400px; } 
+
+.hg-item .placeholder-img {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.hg-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    background: rgba(255,255,255,0.8);
+    padding: 2px 5px;
+}
+
+/* AllFilms Grid */
+.allfilms-grid-sec {
+    margin-bottom: 100px;
+}
+
+.films-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.film-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.film-card .placeholder-img {
+    height: 250px; /* Smaller than hotgirls */
+    background: #e5e5e5;
+    width: 100%;
+}
+
+.film-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* Text List Section */
+.text-list-sec {
+    position: relative;
+    padding: 50px 0;
+    margin-bottom: 100px;
+}
+
+.large-text-list {
+    list-style: none;
+}
+
+.large-text-list li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.large-text-list li:hover {
+    color: #000;
+}
+
+.large-text-list li sup {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    vertical-align: super;
+    margin-left: 5px;
+}
+
+.show-more {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Overlay Image */
+.overlay-image-container {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    width: 300px;
+    height: 400px;
+    background: #ccc;
+    z-index: 10;
+    /* Normally hidden until hover, but visual shows it present */
+    display: block; 
+}
+
+/* Neo-Brutalism Scrollbar */
+::-webkit-scrollbar { width: 16px; height: 16px; background: #ffffff; border-left: 3px solid #000000; border-top: 3px solid #000000; }
+::-webkit-scrollbar-track { background: #ffffff; }
+::-webkit-scrollbar-thumb { background: #000000; border: 3px solid #ffffff; box-shadow: inset -2px -2px 0px 0px rgba(255, 255, 255, 0.5); }
+::-webkit-scrollbar-thumb:hover { background: #FF0000; }
+::-webkit-scrollbar-corner { background: #ffffff; border: 3px solid #000000; }

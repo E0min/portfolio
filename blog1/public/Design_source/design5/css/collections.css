@@ -1,0 +1,174 @@
+/* Header Styles (Matched to All Films but with Green Color) */
+.section-header {
+    padding: 0px 1.0417vw;
+    background: #fff;
+    margin-bottom: 2.0833vw;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3.1250vw;
+    gap: 4.4792vw;
+}
+
+.site-title {
+    font-family: 'Oswald', sans-serif;
+    color: #90FC82;
+    /* requested green */
+    font-size: 2.5000vw;
+    font-weight: 300;
+    text-decoration: underline;
+    text-underline-offset: 0.2604vw;
+    padding: 1.0417vw 0.0000vw;
+}
+
+.mini-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.mini-nav a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: #90FC82;
+    /* requested green */
+    text-decoration: none;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* Collections Page Styles */
+
+/* Header Override for SVG Title */
+.page-title-svg-collections {
+    width: 49.2188vw;
+    /* 945px */
+    height: auto;
+    margin: 0;
+    display: block;
+}
+
+.scroll-arrow-down {
+    position: absolute;
+    top: 50%;
+    /* Adjust */
+    right: 33%;
+    transform: translateY(-50%);
+}
+
+.collections-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7.8125vw;
+    /* 150px gap between rows */
+    margin-bottom: 7.8125vw;
+}
+
+.collection-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    /* Side padding handled by content-wrapper (20px) */
+    gap: 2.6042vw;
+}
+
+.collection-row.reverse {
+    flex-direction: row-reverse;
+    /* Replaces just swapping div order in HTML if inconsistent but I used DOM order. */
+    /* If DOM order is maintained as Img Left in HTML for reverse rows, this isn't needed unless we strictly use row-reverse.
+       I structured HTML as Img Left for reverse rows, so flex-direction can stay row.
+       But standardizing HTML and using CSS for order is often better. structure in HTML reflects visual order creates less confusion.
+    */
+}
+
+.col-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col-image {
+    flex: 1.2;
+    /* Images are larger */
+    /* Removed fixed height to allow natural aspect ratio */
+    /* height: 31.2500vw; */
+    /* background-color: #000; */
+    /* overflow: hidden; */
+}
+
+.col-image .collection-img {
+    width: 100%;
+    height: auto;
+    /* Changed from 100% to auto */
+    /* object-fit: cover; */
+    display: block;
+}
+
+.col-kicker {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7292vw;
+    /* 14px */
+    color: #999;
+    margin-bottom: 1.0417vw;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.col-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 160;
+    font-size: 8.3333vw;
+    /* 160px */
+    line-height: 7.2917vw;
+    /* 140px */
+    color: #2B2929;
+    /* Updated color from Figma */
+    margin-bottom: 1.5625vw;
+}
+
+.col-title.align-right {
+    text-align: right;
+}
+
+.col-text.right {
+    align-items: flex-end;
+}
+
+.read-more {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8333vw;
+    /* 16px */
+    color: #000;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5208vw;
+    text-transform: uppercase;
+    margin-top: 1.0417vw;
+}
+
+.read-more .arrow {
+    font-size: 1vw;
+}
+
+.icon {
+    font-family: serif;
+    /* Just for the flower symbol */
+    vertical-align: middle;
+}
+/* Neo-Brutalism Scrollbar */
+::-webkit-scrollbar { width: 16px; height: 16px; background: #ffffff; border-left: 3px solid #000000; border-top: 3px solid #000000; }
+::-webkit-scrollbar-track { background: #ffffff; }
+::-webkit-scrollbar-thumb { background: #000000; border: 3px solid #ffffff; box-shadow: inset -2px -2px 0px 0px rgba(255, 255, 255, 0.5); }
+::-webkit-scrollbar-thumb:hover { background: #FF0000; }
+::-webkit-scrollbar-corner { background: #ffffff; border: 3px solid #000000; }

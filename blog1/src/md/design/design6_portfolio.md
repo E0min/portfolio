@@ -15,4 +15,4 @@ title: "Fireworks"
 
 ## 라이브 프리뷰
 
-IFRAME:/portfolio/design6/index.html
+IFRAME:/Design_source/design6/index.html

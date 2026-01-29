@@ -15,4 +15,4 @@ title: "Mean Girls"
 
 ## 라이브 프리뷰
 
-IFRAME:/portfolio/design5/index.html
+IFRAME:/Design_source/design5/index.html

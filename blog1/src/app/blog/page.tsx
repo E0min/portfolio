@@ -19,6 +19,7 @@ export default function BlogListing() {
                     const fileContent = fs.readFileSync(filePath, 'utf-8');
                     const { data } = matter(fileContent);
                     return {
+                        id: file.replace('.md', ''),
                         slug: file.replace('.md', ''),
                         title: data.title,
                         description: data.description,

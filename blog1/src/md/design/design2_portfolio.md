@@ -15,4 +15,4 @@ title: "PUSHPULLDOOR"
 
 ## 라이브 프리뷰
 
-IFRAME:/portfolio/design2/index.html
+IFRAME:/Design_source/design2/index.html

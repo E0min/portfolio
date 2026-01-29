@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
             }}>
                 <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <ScrollVelocity
-                        texts={['PORTFOLIO', 'Βιβλιοθήκη της Αλεξάνδρειας', 'Library of Alexandria']}
+                        texts={['WELCOME TO MY PORTFOLIO', 'Βιβλιοθήκη της Αλεξάνδρειας', 'Library of Alexandria']}
                         velocity={20}
                         className="custom-scroll-text"
                     />
@@ -83,23 +83,23 @@ const Navbar: React.FC = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-lg)', width: '100%' }}>
                 {/* Min Section */}
                 <div>
-                    <div className="neo-link" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Min</div>
+                    <div className="neo-link" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Min</div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)', paddingLeft: 'var(--spacing-md)' }}>
-                        <Link href="/resume" className="neo-link" style={{ fontSize: '1.5rem' }}>Resume</Link>
-                        <Link href="/about-min" className="neo-link" style={{ fontSize: '1.5rem' }}>About Min</Link>
+                        <Link href="/resume" className="neo-link" style={{ fontSize: '1rem' }}>Resume</Link>
+                        <Link href="/about-min" className="neo-link" style={{ fontSize: '1rem' }}>About Min</Link>
                     </div>
                 </div>
 
                 {/* Portfolio Section */}
                 <div>
-                    <Link href="/portfolio" className="neo-link" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px', display: 'block' }}>Portfolio</Link>
+                    <Link href="/portfolio" className="neo-link" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px', display: 'block' }}>Portfolio</Link>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)', paddingLeft: 'var(--spacing-md)' }}>
                         {portfolioItems.map(item => (
                             <Link
                                 key={item.slug}
                                 href={`/portfolio/${item.slug}`}
                                 className="neo-link"
-                                style={{ fontSize: '1.5rem' }}
+                                style={{ fontSize: '1rem' }}
                             >
                                 {item.title}
                             </Link>
@@ -109,14 +109,14 @@ const Navbar: React.FC = () => {
 
                 {/* Design Section */}
                 <div>
-                    <div className="neo-link" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Design</div>
+                    <Link href="/design" className="neo-link" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px', display: 'block' }}>Design</Link>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)', paddingLeft: 'var(--spacing-md)' }}>
                         {designItems.map(item => (
                             <Link
                                 key={item.slug}
                                 href={`/portfolio/${item.slug}`}
                                 className="neo-link"
-                                style={{ fontSize: '1.5rem' }}
+                                style={{ fontSize: '1rem' }}
                             >
                                 {item.title}
                             </Link>
@@ -124,8 +124,8 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
 
-                <Link href="/blog" className="neo-link" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Blog</Link>
-                <Link href="/contact" className="neo-link" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Contact</Link>
+                <Link href="/blog" className="neo-link" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Blog</Link>
+                <Link href="/contact" className="neo-link" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Contact</Link>
             </div>
 
             <div style={{ marginTop: 'auto', fontSize: '0.8rem', fontWeight: 'bold' }}>

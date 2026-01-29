@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Films - Mean Girls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/all_films.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header / Nav -->
+        <header class="section-header">
+            <div class="top-nav">
+                <a href="index.html" class="site-title">Mean girls</a>
+                <nav class="mini-nav">
+                    <a href="all_films.html">All Films</a>
+                    <a href="collections.html">Collections</a>
+                    <a href="#">Docs</a>
+                    <a href="#">About</a>
+                </nav>
+            </div>
+
+            <div class="header-main">
+                <img src="images/svg/all_films/ALL FILMS.svg" alt="ALL FILMS" class="page-title-svg">
+                <div class="header-icons">
+                    <!-- Grid/List toggle icons -->
+                    <div class="view-toggle">
+                        <img src="images/svg/all_films/gallery.svg" alt="Gallery View" class="view-icon"
+                            id="btn-grid-view">
+                        <img src="images/svg/all_films/list.svg" alt="List View" class="view-icon" id="btn-list-view">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <!-- Grid View Container -->
+            <div id="view-grid">
+                <!-- 1. Hotgirls Section (Masonry-like) -->
+                <section class="section hotgirls">
+                    <h2 class="section-subtitle">Hotgirls</h2>
+                    <div class="hotgirls-three-columns">
+                        <!-- Column 1 (Left): 534px -->
+                        <div class="hg-col">
+                            <!-- Item 1: Arco -->
+                            <div class="hg-item portrait-tall">
+                                <div class="placeholder-img">Use generate_image</div>
+                                <span class="hg-caption">Etta</span>
+                            </div>
+                            <!-- Item 5: Devil Wears Prada 2 -->
+                            <div class="hg-item landscape">
+                                <div class="placeholder-img">Use generate_image</div>
+                                <span class="hg-caption">The Devil Wears Prada 2</span>
+                            </div>
+                            <!-- Item 7: Monica's News -->
+                            <div class="hg-item portrait-tall">
+                                <div class="placeholder-img">Use generate_image</div>
+                                <span class="hg-caption">Mick Ronson</span>
+                            </div>
+                        </div>
+
+                        <!-- Column 2 (Center): 775px -->
+                        <div class="hg-col center">
+                            <!-- Item 2: Sirat -->
+                            <div class="hg-item landscape">
+                                <div class="placeholder-img">Use generate_image</div>
+                                <span class="hg-caption">Etta</span>
+                            </div>
+                            <!-- Item 4: 5 Centimeters -->
+                            <div class="hg-item landscape">
+                                <div class="placeholder-img">Use generate_image</div>
+                                <span class="hg-caption">El Deforme y el Sr. Sumer</span>
+                            </div>
+                        </div>
+
+                        <!-- Column 3 (Right): 534px -->
+                        <div class="hg-col">
+                            <!-- Item 3: Chronology -->
+                            <div class="hg-item portrait-tall">
+                                <div class="placeholder-img">Use generate_image</div>
+                                <span class="hg-caption">The Chronology of Water</span>
+                            </div>
+                            <!-- Item 6: The Drama -->
+                            <div class="hg-item portrait-tall">
+                                <div class="placeholder-img">Use generate_image</div>
+                                <span class="hg-caption">The Drama</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. AllFilms Grid Section -->
+                <section class="section allfilms-grid-sec">
+                    <h2 class="section-subtitle right-align">AllFilms</h2>
+                    <div class="films-grid">
+                        <!-- Standard grid items, rows of 3 -->
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">ON BECOMING A
+                                GUINEA
+                                FOWL</span>
+                        </div>
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">Paradice Is
+                                Burning</span>
+                        </div>
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">Emilia
+                                Perez</span>
+                        </div>
+
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">Spencer ▲</span>
+                        </div>
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">Past Lives</span>
+                        </div>
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">No Other
+                                Choice</span>
+                        </div>
+
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">Vortex ▲</span>
+                        </div>
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">White People and
+                                the
+                                Elasticity of... ▲</span>
+                        </div>
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">The Life of
+                                Chuck</span>
+                        </div>
+
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">El Muerto y Ser
+                                Feliz</span>
+                        </div>
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">House of
+                                Carter</span>
+                        </div>
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">Perfect Days
+                                ▲</span>
+                        </div>
+
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">Anatomy of a Fall
+                                ▲</span>
+                        </div>
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">Triangle of
+                                Sadness
+                                ▲</span>
+                        </div>
+                        <div class="film-card">
+                            <div class="placeholder-img rect-small">Img</div><span class="film-title">Beef</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Text List Section -->
+                <section class="section text-list-sec">
+                    <ul class="large-text-list">
+                        <li data-image="room-next-door">The Room Next Door <sup>2024</sup></li>
+                        <li data-image="death-unicorn">Death of a Unicorn <sup>2025</sup></li>
+                        <li data-image="immaculate">Immaculate <sup>2024</sup></li>
+                        <li data-image="oldboy">Oldboy <sup>2003</sup></li>
+                        <li data-image="materialists">Materialists <sup>2025</sup></li>
+                        <li data-image="zone-interest">The Zone of Interest <sup>2024</sup></li>
+                        <li data-image="father-mother">Father Mother Sister Brother <sup>2026</sup></li>
+                    </ul>
+                    <div class="show-more">
+                        <span class="plus-icon">+</span> SHOW MORE
+                    </div>
+
+                    <!-- Hover Image Container -->
+                    <div class="list-hover-img">
+                        <div class="placeholder-img">Hover Image</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- List View Container (Hidden by default) -->
+            <div id="view-list" class="hidden">
+                <div class="list-view-content">
+                    <!-- Item 1 -->
+                    <div class="list-row" data-image="marty-supreme">
+                        <div class="list-col title">Marty Supreme</div>
+                        <div class="list-col meta">
+                            <div class="label">DIRECTOR</div>
+                            <div class="value">Josh Safdie</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">GENRE</div>
+                            <div class="value">Sports Comedy Drama</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">RELEASE DATE</div>
+                            <div class="value">2025</div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="list-row" data-image="bugonia">
+                        <div class="list-col title">Bugonia</div>
+                        <div class="list-col meta">
+                            <div class="label">DIRECTOR</div>
+                            <div class="value">Yorgos Lanthimos</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">GENRE</div>
+                            <div class="value">Thriller</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">RELEASE DATE</div>
+                            <div class="value">2025</div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="list-row" data-image="exit-8">
+                        <div class="list-col title">The Exit 8</div>
+                        <div class="list-col meta">
+                            <div class="label">DIRECTOR</div>
+                            <div class="value">Kawamura Genki</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">GENRE</div>
+                            <div class="value">Thriller</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">RELEASE DATE</div>
+                            <div class="value">2025</div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="list-row" data-image="no-other-choice">
+                        <div class="list-col title">No Other Choice</div>
+                        <div class="list-col meta">
+                            <div class="label">DIRECTOR</div>
+                            <div class="value">Park Chan Wook</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">GENRE</div>
+                            <div class="value">Thriller</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">RELEASE DATE</div>
+                            <div class="value">2025</div>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="list-row" data-image="titanic">
+                        <div class="list-col title">Titanic</div>
+                        <div class="list-col meta">
+                            <div class="label">DIRECTOR</div>
+                            <div class="value">James Cameron</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">GENRE</div>
+                            <div class="value">Romance</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">RELEASE DATE</div>
+                            <div class="value">1998</div>
+                        </div>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="list-row" data-image="pulp-fiction">
+                        <div class="list-col title">Pulp Fiction</div>
+                        <div class="list-col meta">
+                            <div class="label">DIRECTOR</div>
+                            <div class="value">Quentin Tarantino</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">GENRE</div>
+                            <div class="value">Crime</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">RELEASE DATE</div>
+                            <div class="value">1994</div>
+                        </div>
+                    </div>
+                    <!-- Item 7 -->
+                    <div class="list-row" data-image="parasite">
+                        <div class="list-col title">Parasite</div>
+                        <div class="list-col meta">
+                            <div class="label">DIRECTOR</div>
+                            <div class="value">Bong Joon-ho</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">GENRE</div>
+                            <div class="value">Black Comedy</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">RELEASE DATE</div>
+                            <div class="value">2019</div>
+                        </div>
+                    </div>
+                    <!-- Item 8 -->
+                    <div class="list-row" data-image="spider-man">
+                        <div class="list-col title">The Amazing Spider Man</div>
+                        <div class="list-col meta">
+                            <div class="label">DIRECTOR</div>
+                            <div class="value">Marc Webb</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">GENRE</div>
+                            <div class="value">Action</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">RELEASE DATE</div>
+                            <div class="value">2012</div>
+                        </div>
+                    </div>
+                    <!-- Item 9 -->
+                    <div class="list-row" data-image="accident">
+                        <div class="list-col title">It Was Just an Accident</div>
+                        <div class="list-col meta">
+                            <div class="label">DIRECTOR</div>
+                            <div class="value">Jafar Panahi</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">GENRE</div>
+                            <div class="value">Thriller</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">RELEASE DATE</div>
+                            <div class="value">2025</div>
+                        </div>
+                    </div>
+                    <!-- Item 10 -->
+                    <div class="list-row" data-image="joker">
+                        <div class="list-col title">Joker</div>
+                        <div class="list-col meta">
+                            <div class="label">DIRECTOR</div>
+                            <div class="value">Todd Phillips</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">GENRE</div>
+                            <div class="value">Psychological Thriller</div>
+                        </div>
+                        <div class="list-col meta">
+                            <div class="label">RELEASE DATE</div>
+                            <div class="value">2019</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cursor Follow Image -->
+            <div id="cursor-img" style="opacity: 0;">
+                <div class="placeholder-img">Poster</div>
+            </div>
+
+            <!-- Reused Footer Section -->
+            <section class="section about">
+                <h2 class="section-title">ABOUT</h2>
+                <div class="about-grid">
+                    <!-- 1. FILMS -->
+                    <div class="about-card">
+                        <h4>FILMS</h4>
+                        <div class="card-bottom">
+                            <a href="#">All</a>
+                        </div>
+                    </div>
+
+                    <!-- 2. EDITS -->
+                    <div class="about-card">
+                        <h4>EDITS</h4>
+                        <div class="card-bottom vertical-links">
+                            <a href="#">Home</a>
+                            <a href="#">Editor's Note</a>
+                            <a href="#">Collections</a>
+                        </div>
+                    </div>
+
+                    <!-- 3. MEAN -->
+                    <div class="about-card">
+                        <h4>MEAN</h4>
+                        <div class="mean-content">
+                            <p class="en-desc"><strong>MEAN</strong> is an editorial platform<br>built around selection,
+                                interpretation, and record.</p>
+                            <p class="en-desc"><strong>Films</strong> are not listed, but
+                                curated.<br><strong>Texts</strong> are not reviews, but
+                                positions.<br><strong>Collections</strong> are not categories, but perspectives.</p>
+                            <p class="kr-desc"><strong>MEAN</strong>은 선택, 해석, 기록을 중심으로<br>영화를 다루는 에디토리얼 플랫폼입니다.</p>
+                            <p class="kr-desc">영화는 나열되지 않고 선별되며,<br>텍스트는 리뷰가 아닌 관점으로,<br>컬렉션은 분류가 아닌 시선으로 구성됩니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. SOCIALS -->
+                    <div class="social-wrapper">
+                        <div class="social-row top">
+                            <div class="social-card"><i class="fab fa-instagram"></i></div>
+                            <div class="social-card"><i class="fab fa-tiktok"></i></div>
+                        </div>
+                        <div class="social-row bottom">
+                            <div class="social-card"><i class="fa-brands fa-x-twitter"></i></div>
+                            <!-- Assuming FontAwesome 6 for X, else just X -->
+                            <div class="social-card"><i class="fab fa-facebook-f"></i></div>
+                            <div class="social-card"><i class="fab fa-youtube"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Footer -->
+            <footer class="main-footer">
+                <div class="footer-logo">
+                    <div class="footer-logo-wrapper">
+                        <img src="images/svg/me n.svg" alt="ME N" class="men-svg">
+                        <div class="footer-pill">
+                            <img src="images/image 1446.png" alt="Anatomy of a Fall" class="footer-img-bg">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

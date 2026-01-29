@@ -15,4 +15,4 @@ title: "WeatherAPI"
 
 ## 라이브 프리뷰
 
-IFRAME_SQUARE:/portfolio/design3/index.html
+IFRAME_SQUARE:/Design_source/design3/index.html
