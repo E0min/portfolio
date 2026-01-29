@@ -1,5 +1,6 @@
 ---
 title: "WeatherAPI"
+image: "/Design_Gallery/Design3.png"
 ---
 
 # WeatherAPI

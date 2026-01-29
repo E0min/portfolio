@@ -1,5 +1,6 @@
 ---
 title: "Firebase Hosting"
+image: "/Design_Gallery/Design4.png"
 ---
 
 # Firebase Hosting

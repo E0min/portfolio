@@ -1,5 +1,6 @@
 ---
 title: "RECAP FESTIVAL"
+image: "/Design_Gallery/Design1.png"
 ---
 
 # RECAP FESTIVAL

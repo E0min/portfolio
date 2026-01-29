@@ -1,5 +1,6 @@
 ---
 title: "PUSHPULLDOOR"
+image: "/Design_Gallery/Design2.png"
 ---
 
 # PUSHPULLDOOR

@@ -1,5 +1,6 @@
 ---
 title: "Mean Girls"
+image: "/Design_Gallery/Design5.png"
 ---
 
 # Mean Girls

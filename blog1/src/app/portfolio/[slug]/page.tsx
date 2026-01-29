@@ -85,6 +85,24 @@ export default async function PortfolioPage({ params }: { params: Promise<{ slug
     return (
         <main style={{ padding: 'var(--spacing-xl) var(--spacing-md)', maxWidth: '1400px', margin: '0 auto' }}>
             <div className="portfolio-content">
+                {frontmatter.image && (
+                    <img
+                        src={frontmatter.image}
+                        alt={frontmatter.title}
+                        style={{
+                            width: '100%',
+                            height: 'auto',
+                            maxHeight: '500px',
+                            objectFit: 'contain',
+                            display: 'block',
+                            margin: '0 auto',
+                            border: 'var(--border-thick)',
+                            boxShadow: 'var(--shadow-hard)',
+                            marginBottom: 'var(--spacing-lg)',
+                            backgroundColor: '#fff'
+                        }}
+                    />
+                )}
                 <ReactMarkdown
                     rehypePlugins={[rehypeRaw]}
                     remarkPlugins={[remarkGfm]}

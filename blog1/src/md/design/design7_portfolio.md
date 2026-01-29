@@ -1,7 +1,7 @@
 ---
 title: "Dankook Univ. ID Card"
 description: "단국대학교 학생증 카드 디자인 공모전 제출작"
-image: "/Design_card/최종.svg"
+image: "/Design_Gallery/Design7.svg"
 ---
 
 # Dankook University ID Card Design
