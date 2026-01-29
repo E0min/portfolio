@@ -4,29 +4,46 @@ import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import { notFound } from 'next/navigation';
-import Mermaid from '@/components/mermaid';
+import Mermaid from '@/util/mermaid';
 import DemoPreview from '@/components/demo-preview';
 import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm';
 
 export default async function PortfolioPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
-    const mdDir = path.join(process.cwd(), 'src/app/md');
+    const mdDir = path.join(process.cwd(), 'src/md');
+    const portfolioDir = path.join(process.cwd(), 'src/md/portfolio');
+    const designDir = path.join(process.cwd(), 'src/md/design');
 
     let markdownContent = '';
     let frontmatter: any = {};
 
     try {
-        // Find matching portfolio file (case-insensitive)
-        const files = fs.readdirSync(mdDir);
-        const matchingFile = files.find(file =>
-            file.toLowerCase() === `${slug.toLowerCase()}_portfolio.md`
-        );
+        // 1. Try finding in src/md/portfolio first
+        let matchingFile;
+        let targetDir = portfolioDir;
+
+        if (fs.existsSync(portfolioDir)) {
+            const portfolioFiles = fs.readdirSync(portfolioDir);
+            matchingFile = portfolioFiles.find(file =>
+                file.toLowerCase() === `${slug.toLowerCase()}_portfolio.md`
+            );
+        }
+
+        // 2. If not found, try in src/md/design
+        if (!matchingFile && fs.existsSync(designDir)) {
+            targetDir = designDir;
+            const designFiles = fs.readdirSync(designDir);
+            matchingFile = designFiles.find(file =>
+                file.toLowerCase() === `${slug.toLowerCase()}_portfolio.md`
+            );
+        }
 
         if (!matchingFile) {
             notFound();
         }
 
-        const filePath = path.join(mdDir, matchingFile);
+        const filePath = path.join(targetDir, matchingFile!);
         const fileContent = fs.readFileSync(filePath, 'utf8');
         const { data, content } = matter(fileContent);
         frontmatter = data;
@@ -66,6 +83,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ slug
             <div className="portfolio-content">
                 <ReactMarkdown
                     rehypePlugins={[rehypeRaw]}
+                    remarkPlugins={[remarkGfm]}
                     components={{
                         img: ({ node, ...props }) => (
                             <img
@@ -101,25 +119,51 @@ export default async function PortfolioPage({ params }: { params: Promise<{ slug
                             return <a href={href} style={{ fontWeight: 'bold', textDecoration: 'underline' }} {...props}>{children}</a>;
                         },
                         hr: ({ node, ...props }) => <hr style={{ border: 'none', borderTop: 'var(--border-thick)', margin: 'var(--spacing-lg) 0' }} {...props} />,
-                        code: ({ node, inline, className, children, ...props }: any) => {
+                        code: ({ node, className, children, ...props }: any) => {
                             const match = /language-(\w+)/.exec(className || '');
                             const language = match ? match[1] : '';
 
                             // Check if it's a mermaid code block
-                            if (!inline && language === 'mermaid') {
-                                return <Mermaid chart={String(children).replace(/\n$/, '')} />;
+                            if (language === 'mermaid') {
+                                return (
+                                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', margin: 'var(--spacing-md) 0' }}>
+                                        <div style={{ width: '90%', border: 'none' }}>
+                                            <Mermaid chart={String(children).replace(/\n$/, '')} />
+                                        </div>
+                                    </div>
+                                );
                             }
 
-                            return inline ? (
-                                <code style={{ backgroundColor: '#f0f0f0', padding: '2px 4px', borderRadius: '3px', fontFamily: 'monospace' }} {...props}>
-                                    {children}
-                                </code>
-                            ) : (
-                                <code style={{ display: 'block', backgroundColor: '#f0f0f0', padding: 'var(--spacing-md)', border: 'var(--border-thin)', marginBottom: 'var(--spacing-md)', overflowX: 'auto', fontFamily: 'monospace' }} {...props}>
+                            return (
+                                <code className={className} {...props}>
                                     {children}
                                 </code>
                             );
                         },
+                        pre: ({ node, children, ...props }) => {
+                            return (
+                                <pre style={{
+                                    backgroundColor: '#ffffff',
+                                    padding: 'var(--spacing-md)',
+                                    marginBottom: 'var(--spacing-md)',
+                                    borderRadius: '4px',
+                                    overflowX: 'auto',
+                                    color: '#000000',
+                                    border: 'var(--border-thick)',
+                                    boxShadow: 'var(--shadow-hard)'
+                                }} {...props}>
+                                    {children}
+                                </pre>
+                            );
+                        },
+                        // Add table support styling
+                        table: ({ node, ...props }) => <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: 'var(--spacing-md)', border: 'var(--border-thin)' }} {...props} />,
+                        thead: ({ node, ...props }) => <thead style={{ backgroundColor: '#f5f5f5' }} {...props} />,
+                        tbody: ({ node, ...props }) => <tbody {...props} />,
+                        tr: ({ node, ...props }) => <tr style={{ borderBottom: '1px solid #ddd' }} {...props} />,
+                        th: ({ node, ...props }) => <th style={{ padding: 'var(--spacing-sm)', textAlign: 'left', fontWeight: 'bold', border: '1px solid #000' }} {...props} />,
+                        td: ({ node, ...props }) => <td style={{ padding: 'var(--spacing-sm)', border: '1px solid #000' }} {...props} />,
+                        blockquote: ({ node, ...props }) => <blockquote style={{ borderLeft: '4px solid #000', paddingLeft: 'var(--spacing-md)', color: '#666', fontStyle: 'italic', margin: 'var(--spacing-md) 0' }} {...props} />,
                     }}
                 >
                     {processedContent}

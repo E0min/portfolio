@@ -8,9 +8,8 @@ channel:
   blog: "https://velog.io/@bbok3yo/posts"
 ---
 
-### 자기소개
+## ABOUT ME
 
----
 
 - **React/Next.js (App Router) 기반 프로젝트에서 동적 라우팅 및 전역 상태 관리를 포함한 아키텍처를 설계하고 구축했습니다.**
 - **TypeScript를 점진적으로 도입하여 인터페이스 설계 및 API 타입 정의를 통해 코드의 타입 안정성을 확보했습니다.**
@@ -18,9 +17,8 @@ channel:
 - **컴포넌트 재사용성, API 호출 타이밍 등 '실제 서비스' 관점에서 구조 설계를 주도하며 성능 최적화를 추진했습니다.**
 - **'함께 일하고 싶은 동료'로서, 기술과 더불어 좋은 팀 문화를 만드는 데 적극 기여합니다.**
 
-### Activities
+## Activities
 
----
 
 ### **프론트엔드 개발자 과정**
 
@@ -41,17 +39,15 @@ channel:
 - 협업 툴과 개발 전반을 아우르며, 실제 프로젝트에서의 기본적인 협업 프로세스를 이해
 - 과정 수료 후 프로젝트 부분에서 우수상 및 우수교육생으로 선정
 
-### Education
+## Education
 
----
 
 - 단국대학교 컴퓨터공학과 : 2019.03. ~ (졸업예정)
 
-### Stacks
+## Stacks
 
----
 
-## Front-End
+### Front-End
 
 - HTML, CSS(SCSS), JS(ES6) & TS
 - React.js, Next.js,
@@ -59,15 +55,14 @@ channel:
 - Redux-toolkit, react-query, zustand, redux
 - D3.js, P5.js, Three.js
 
-## Collaboration & Tools
+###  Collaboration & Tools
 
 - slack
 - Figma
 - Git, Github
 
-### Projects
+## Projects
 
----
 
 ### chatGraph (AI 대화 시각화 플랫폼)
 

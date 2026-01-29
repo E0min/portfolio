@@ -3,33 +3,51 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import ScrollVelocity from '../ui/ScrollVelocity';
+
 
 const Navbar: React.FC = () => {
     // Read portfolio files from md directory
-    const mdDir = path.join(process.cwd(), 'src/app/md');
+    const mdDir = path.join(process.cwd(), 'src/md');
+    const portfolioDir = path.join(process.cwd(), 'src/md/portfolio');
+    const designDir = path.join(process.cwd(), 'src/md/design');
+
     let portfolioItems: { slug: string; title: string }[] = [];
     let designItems: { slug: string; title: string }[] = [];
 
     try {
-        const files = fs.readdirSync(mdDir);
-        const allItems = files
-            .filter(file => file.endsWith('_portfolio.md'))
-            .map(file => {
-                const slug = file.replace('_portfolio.md', '').toLowerCase();
-                const filePath = path.join(mdDir, file);
-                const fileContent = fs.readFileSync(filePath, 'utf-8');
-                const { data } = matter(fileContent);
-                const title = data.title || file.replace('_portfolio.md', '');
-                return { slug, title };
-            });
+        // Get Portfolio Items from src/md/portfolio
+        if (fs.existsSync(portfolioDir)) {
+            const portfolioFiles = fs.readdirSync(portfolioDir);
+            portfolioItems = portfolioFiles
+                .filter(file => file.endsWith('_portfolio.md'))
+                .map(file => {
+                    const content = fs.readFileSync(path.join(portfolioDir, file), 'utf-8');
+                    const { data } = matter(content);
+                    return {
+                        slug: file.replace('_portfolio.md', ''),
+                        title: data.title || file.replace('_portfolio.md', '')
+                    };
+                });
+        }
 
-        // Separate design items from portfolio items
-        designItems = allItems.filter(item => item.slug.startsWith('design'));
-        portfolioItems = allItems.filter(item => !item.slug.startsWith('design'));
+        // Get Design Items from src/md/design
+        if (fs.existsSync(designDir)) {
+            const designFiles = fs.readdirSync(designDir);
+            designItems = designFiles
+                .filter(file => file.toLowerCase().startsWith('design') && file.endsWith('_portfolio.md'))
+                .map(file => {
+                    const content = fs.readFileSync(path.join(designDir, file), 'utf-8');
+                    const { data } = matter(content);
+                    return {
+                        slug: file.replace('_portfolio.md', ''),
+                        title: data.title || file.replace('_portfolio.md', '')
+                    };
+                });
+        }
     } catch (error) {
-        console.error("Error reading portfolio files:", error);
+        console.error("Error reading portfolio/design files:", error);
     }
-
     return (
         <nav style={{
             position: 'fixed',
@@ -48,28 +66,40 @@ const Navbar: React.FC = () => {
             overflowY: 'auto'
         }}>
             <div style={{
-                fontWeight: '900',
-                fontSize: '1.5rem',
                 marginBottom: 'var(--spacing-xl)',
                 borderBottom: 'var(--border-thin)',
                 paddingBottom: 'var(--spacing-sm)',
-                width: '100%'
+                width: '100%',
+                overflow: 'hidden'
             }}>
-                <Link href="/" style={{ textDecoration: 'none' }}>MY<br />PORTFOLIO</Link>
+                <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <ScrollVelocity
+                        texts={['PORTFOLIO', 'Βιβλιοθήκη της Αλεξάνδρειας', 'Library of Alexandria']}
+                        velocity={20}
+                        className="custom-scroll-text"
+                    />
+                </Link>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-lg)', width: '100%' }}>
-                <Link href="/resume" className="neo-link" style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Resume</Link>
+                {/* Min Section */}
+                <div>
+                    <div className="neo-link" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Min</div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)', paddingLeft: 'var(--spacing-md)' }}>
+                        <Link href="/resume" className="neo-link" style={{ fontSize: '1.5rem' }}>Resume</Link>
+                        <Link href="/about-min" className="neo-link" style={{ fontSize: '1.5rem' }}>About Min</Link>
+                    </div>
+                </div>
 
                 {/* Portfolio Section */}
                 <div>
-                    <div style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)' }}>Portfolio</div>
+                    <Link href="/portfolio" className="neo-link" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px', display: 'block' }}>Portfolio</Link>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)', paddingLeft: 'var(--spacing-md)' }}>
                         {portfolioItems.map(item => (
                             <Link
                                 key={item.slug}
                                 href={`/portfolio/${item.slug}`}
                                 className="neo-link"
-                                style={{ fontSize: '1rem' }}
+                                style={{ fontSize: '1.5rem' }}
                             >
                                 {item.title}
                             </Link>
@@ -79,14 +109,14 @@ const Navbar: React.FC = () => {
 
                 {/* Design Section */}
                 <div>
-                    <div style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)' }}>Design</div>
+                    <div className="neo-link" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Design</div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)', paddingLeft: 'var(--spacing-md)' }}>
                         {designItems.map(item => (
                             <Link
                                 key={item.slug}
                                 href={`/portfolio/${item.slug}`}
                                 className="neo-link"
-                                style={{ fontSize: '1rem' }}
+                                style={{ fontSize: '1.5rem' }}
                             >
                                 {item.title}
                             </Link>
@@ -94,12 +124,12 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
 
-                <Link href="/blog" className="neo-link" style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Blog</Link>
-                <Link href="/contact" className="neo-link" style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Contact</Link>
+                <Link href="/blog" className="neo-link" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Blog</Link>
+                <Link href="/contact" className="neo-link" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Contact</Link>
             </div>
 
             <div style={{ marginTop: 'auto', fontSize: '0.8rem', fontWeight: 'bold' }}>
-                © 2026 Neo-Brut
+
             </div>
         </nav>
     );

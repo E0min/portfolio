@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 
 export default function ResumePage() {
-    const markdownPath = path.join(process.cwd(), 'src/app/md/resume.md');
+    const markdownPath = path.join(process.cwd(), 'src/md/resume.md');
     let markdownContent = '';
     let frontmatter: any = {};
 
@@ -57,14 +57,14 @@ export default function ResumePage() {
                     </h1>
 
                     <div style={{ marginBottom: 'var(--spacing-md)' }}>
-                        <h3 style={{ fontSize: '1.2rem', marginBottom: 'var(--spacing-sm)' }}>Contact</h3>
-                        <p>📧 Email : <a href={`mailto:${frontmatter.contact?.email}`}>{frontmatter.contact?.email}</a></p>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: '900', marginTop: 'var(--spacing-lg)', marginBottom: 'var(--spacing-sm)', fontFamily: '"Pretendard", sans-serif' }}>Email</h3>
+                        <p><a href={`mailto:${frontmatter.contact?.email}`} className="neo-link">{frontmatter.contact?.email}</a></p>
                     </div>
 
                     <div>
-                        <h3 style={{ fontSize: '1.2rem', marginBottom: 'var(--spacing-sm)' }}>Channel</h3>
-                        <p>Github : <a href={frontmatter.channel?.github} target="_blank" rel="noopener noreferrer">Github</a></p>
-                        <p>Blog : <a href={frontmatter.channel?.blog} target="_blank" rel="noopener noreferrer">Velog</a></p>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: '900', marginTop: 'var(--spacing-lg)', marginBottom: 'var(--spacing-sm)', fontFamily: '"Pretendard", sans-serif' }}>Channel</h3>
+                        <p><a href={frontmatter.channel?.github} target="_blank" rel="noopener noreferrer" className="neo-link">Github</a></p>
+                        <p><a href={frontmatter.channel?.blog} target="_blank" rel="noopener noreferrer" className="neo-link">Velog</a></p>
                     </div>
                 </div>
             </header>

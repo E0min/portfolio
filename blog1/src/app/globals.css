@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 :root {
   /* Neo-Brutalism Mono Palette */
   --bg-color: #ffffff;
@@ -28,10 +30,10 @@ body {
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
-  /* Raw, brutal monospaced feel */
-  -webkit-font-smoothing: none;
-  /* Crisper text for retro feel */
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  /* Updated to Pretendard for better Korean support while maintaining clean look */
+  -webkit-font-smoothing: antialiased;
+  /* Crisper text */
 }
 
 * {
@@ -59,6 +61,11 @@ a {
   box-shadow: 7px 7px 0px 0px #000000;
 }
 
+.neo-box.static:hover {
+  transform: none;
+  box-shadow: var(--shadow-hard);
+}
+
 .neo-button {
   background: #ffffff;
   color: var(--text-main);
@@ -68,16 +75,17 @@ a {
   font-weight: bold;
   cursor: pointer;
   text-transform: uppercase;
-  transition: all 0.1s;
+  transition: all 0.2s ease;
 }
 
 .neo-button:hover {
   background: #000000;
-  color: #ffffff;
+  color: #FF0000;
+  box-shadow: 7px 7px 0px 0px #000000;
 }
 
 .neo-button:active {
-  transform: translate(2px, 2px);
+  transform: translate(0, 0);
   box-shadow: 2px 2px 0px 0px #000000;
 }
 
@@ -103,6 +111,138 @@ a {
   border: none;
 }
 
+/* Markdown Styling */
 .embedded-iframe-container.square {
   aspect-ratio: 1 / 1;
+}
+
+/* Inline code styling - distinct from blocks */
+code {
+  background-color: rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #000000;
+  font-family: inherit;
+  /* Use Pretendard */
+  font-size: 0.9em;
+}
+
+/* Block code styling (inside pre) */
+pre code {
+  background-color: transparent;
+  color: #000000;
+  padding: 0;
+  border: none;
+  font-weight: normal;
+  font-family: monospace;
+}
+
+/* Block container styling is handled in page.tsx via pre style prop, 
+   but we ensure reset here */
+pre {
+  margin: 0;
+}
+
+/* Mermaid Diagram Customization for Neo-Brutalism */
+g.node rect,
+g.node circle,
+g.node polygon,
+g.node path {
+  fill: #ffffff !important;
+  stroke: #000000 !important;
+  stroke-width: 1px !important;
+  /* SVG equivalent of box-shadow: 2px 2px 0px 0px #000 with simple drop-shadow */
+  filter: drop-shadow(2px 2px 0px #000000);
+}
+
+g.node .label {
+  font-family: "Pretendard", sans-serif !important;
+  color: #000000 !important;
+}
+
+/* Lines/Edges */
+g.edgePath path {
+  stroke: #000000 !important;
+  stroke-width: 1.5px !important;
+}
+
+/* Neo-Brutalism Skeleton Animation */
+@keyframes neo-blink {
+
+  0%,
+  100% {
+    opacity: 1;
+    background-color: #ffffff;
+  }
+
+  50% {
+    opacity: 0.5;
+    background-color: #f0f0f0;
+  }
+}
+
+.neo-skeleton {
+  width: 100%;
+  /* height is dynamic via inline styles */
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  animation: neo-blink 1.5s infinite steps(2);
+  /* Harsh blinking */
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+
+/* Neo-Brutalism Link Styling */
+.neo-link {
+  display: inline-block;
+  padding: 2px 5px;
+  transition: all 0.2s ease;
+  width: 100%;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.neo-link:hover {
+  background-color: #000000;
+  color: #FF0000;
+  text-decoration: none;
+}
+
+/* Neo-Brutalism Scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-left: var(--border-thick);
+  border-top: var(--border-thick);
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border: 3px solid #ffffff;
+  /* Creates a gap effect or double border look */
+  box-shadow: inset -2px -2px 0px 0px rgba(255, 255, 255, 0.5);
+  /* Subtle inner depth */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF0000;
+  /* Neo-Brutalism Hover Accent */
+}
+
+::-webkit-scrollbar-corner {
+  background: #ffffff;
+  border: var(--border-thick);
 }
