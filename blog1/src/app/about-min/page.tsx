@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 
 export default function AboutMinPage() {
-    const markdownPath = path.join(process.cwd(), 'src/md/personal-statement.md');
+    const markdownPath = path.join(process.cwd(), 'src/md/about-min.md');
     let markdownContent = '';
     let frontmatter: any = {};
 
@@ -33,9 +33,7 @@ export default function AboutMinPage() {
                 }}>
                     {frontmatter.title || 'About Min'}
                 </h1>
-                <p style={{ fontSize: '1.1rem', color: '#666', fontFamily: '"Pretendard", sans-serif' }}>
-                    Target: <span style={{ fontWeight: 'bold', color: '#000' }}>{frontmatter.target}</span>
-                </p>
+
             </header>
 
             {/* Markdown Content */}
