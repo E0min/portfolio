@@ -116,6 +116,11 @@ a {
   aspect-ratio: 1 / 1;
 }
 
+.embedded-iframe-wrapper.square {
+  width: 50%;
+  margin: var(--spacing-lg) auto;
+}
+
 /* Inline code styling - distinct from blocks */
 code {
   background-color: rgba(0, 0, 0, 0.05);

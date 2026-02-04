@@ -1,6 +1,8 @@
 ---
 title: "Fireworks"
 image: "/Design_Gallery/Design6.png"
+hide_title_image: true
+
 ---
 
 # Fireworks

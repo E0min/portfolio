@@ -1,11 +1,13 @@
 ---
 title: "Firebase Hosting"
 image: "/Design_Gallery/Design4.png"
+hide_title_image: true
+
 ---
 
 # Firebase Hosting
 
-Firebase 호스팅 웹 프로젝트
+콜로소 인터렉티브 디자인과정 - Firebase 호스팅 웹 프로젝트
 
 ## 주요 기능
 

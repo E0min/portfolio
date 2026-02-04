@@ -81,14 +81,8 @@ const Navbar: React.FC = () => {
                 </Link>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-lg)', width: '100%' }}>
-                {/* Min Section */}
-                <div>
-                    <div className="neo-link" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px' }}>Min</div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)', paddingLeft: 'var(--spacing-md)' }}>
-                        <Link href="/resume" className="neo-link" style={{ fontSize: '1rem' }}>Resume</Link>
-                        <Link href="/about-min" className="neo-link" style={{ fontSize: '1rem' }}>About Min</Link>
-                    </div>
-                </div>
+                <Link href="/resume" className="neo-link" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px', display: 'block' }}>Resume</Link>
+                <Link href="/about-min" className="neo-link" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: 'var(--spacing-sm)', textDecoration: 'underline', textDecorationThickness: '2px', display: 'block' }}>About Min</Link>
 
                 {/* Portfolio Section */}
                 <div>

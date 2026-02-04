@@ -1,11 +1,13 @@
 ---
 title: "PUSHPULLDOOR"
 image: "/Design_Gallery/Design2.png"
+hide_title_image: true
+
 ---
 
 # PUSHPULLDOOR
 
-크리에이티브 코딩 그룹 공식 웹사이트
+콜로소 인터렉티브 디자인과정 - 크리에이티브 코딩 그룹 공식 웹사이트
 
 ## 주요 기능
 

@@ -83,9 +83,9 @@ export default async function PortfolioPage({ params }: { params: Promise<{ slug
         .replace(/\*\*([^*]+)\*\*(?=[^\s])/g, '**$1**&#8203;');
 
     return (
-        <main style={{ padding: 'var(--spacing-xl) var(--spacing-md)', maxWidth: '1400px', margin: '0 auto' }}>
+        <main style={{ padding: 'var(--spacing-xl) var(--spacing-md)', maxWidth: '1600px', margin: '0 auto' }}>
             <div className="portfolio-content">
-                {frontmatter.image && (
+                {frontmatter.image && !frontmatter.hide_title_image && (
                     <img
                         src={frontmatter.image}
                         alt={frontmatter.title}
@@ -111,7 +111,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ slug
                             <img
                                 {...props}
                                 style={{
-                                    width: '70%',
+                                    width: '100%',
                                     height: 'auto',
                                     display: 'block',
                                     margin: '0 auto',

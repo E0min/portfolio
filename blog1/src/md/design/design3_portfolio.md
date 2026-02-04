@@ -1,11 +1,13 @@
 ---
 title: "WeatherAPI"
 image: "/Design_Gallery/Design3.png"
+hide_title_image: true
+
 ---
 
 # WeatherAPI
 
-실시간 날씨 정보 시각화 포스터
+콜로소 인터렉티브 디자인과정 - 실시간 날씨 정보 시각화 포스터
 
 ## 주요 기능
 
