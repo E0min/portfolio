@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
                 overflow: 'hidden' // Changed from overflowY: 'auto'
             }}>
                 <div style={{
-                    marginBottom: 'var(--spacing-xl)',
+                    marginBottom: 'var(--spacing-md)',
                     borderBottom: 'var(--border-thick)',
                     paddingBottom: 'var(--spacing-sm)',
                     width: '100%',
