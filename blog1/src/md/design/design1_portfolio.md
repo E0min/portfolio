@@ -7,7 +7,7 @@ hide_title_image: true
 
 # RECAP FESTIVAL
 
-크리에이티브 코딩 그룹 PUSHPULLDOOR의 해커톤 행사 소개 페이지
+콜로소 인터렉티브 디자인과정 - 크리에이티브 코딩 그룹 PUSHPULLDOOR의 해커톤 행사 소개 페이지
 
 ## 주요 기능
 

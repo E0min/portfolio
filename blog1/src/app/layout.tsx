@@ -32,10 +32,37 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning={true}>
-        <Navbar />
-        <div style={{ marginLeft: '250px', width: 'calc(100% - 250px)' }}>
-          {children}
+        <div className="layout-container">
+          <Navbar />
+          <main className="main-content">
+            {children}
+          </main>
         </div>
+        
+        <style>{`
+          .layout-container {
+            display: flex;
+            min-height: 100vh;
+          }
+          .main-content {
+            flex: 1;
+            margin-left: 250px; /* Fixed Navbar width */
+            width: calc(100% - 250px);
+            min-height: 100vh;
+          }
+
+          /* Mobile Layout (Prompt 1) */
+          @media (max-width: 768px) {
+            .layout-container {
+              flex-direction: column;
+            }
+            .main-content {
+              margin-left: 0;
+              width: 100%;
+              padding-top: 80px; /* Space for fixed mobile header */
+            }
+          }
+        `}</style>
       </body>
     </html>
   );

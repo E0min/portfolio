@@ -66,6 +66,14 @@ a {
   box-shadow: var(--shadow-hard);
 }
 
+/* Prompt 3: Mobile Touch Interaction */
+.neo-box:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #000000;
+  /* Compressed shadow */
+}
+
+
 .neo-button {
   background: #ffffff;
   color: var(--text-main);
@@ -221,7 +229,40 @@ g.edgePath path {
   text-decoration: none;
 }
 
-/* Neo-Brutalism Scrollbar */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  :root {
+    --spacing-xl: 32px;
+    /* Prompt 1: spacing-xl reduction */
+    --border-thick: 3px solid #000000;
+    /* Prompt 1: Maintain border-thick */
+    --shadow-hard: 5px 5px 0px 0px #000000;
+    /* Prompt 1: Maintain shadow-hard */
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Typography Clamping (Prompt 1) */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    max-width: 90vw;
+    font-size: clamp(1.5rem, 5vw, 3rem) !important;
+  }
+
+  .neo-box {
+    width: 100%;
+    padding: var(--spacing-md);
+    /* Prompt 1: w-full and box-sizing handled globally */
+  }
+}
+
+/* Scrollbar styling remains at the bottom */
 ::-webkit-scrollbar {
   width: 16px;
   height: 16px;
@@ -237,14 +278,11 @@ g.edgePath path {
 ::-webkit-scrollbar-thumb {
   background: #000000;
   border: 3px solid #ffffff;
-  /* Creates a gap effect or double border look */
   box-shadow: inset -2px -2px 0px 0px rgba(255, 255, 255, 0.5);
-  /* Subtle inner depth */
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #FF0000;
-  /* Neo-Brutalism Hover Accent */
 }
 
 ::-webkit-scrollbar-corner {
