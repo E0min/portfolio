@@ -26,6 +26,8 @@ export const metadata: Metadata = {
 
 import CustomCursor from "@/components/CustomCursor";
 
+import { StickyCursorProvider } from "@/context/StickyCursorContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,13 +36,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning={true}>
-        <CustomCursor />
-        <div className="layout-container">
-          <Navbar />
-          <main className="main-content">
-            {children}
-          </main>
-        </div>
+        <StickyCursorProvider>
+          <CustomCursor />
+          <div className="layout-container">
+            <Navbar />
+            <main className="main-content">
+              {children}
+            </main>
+          </div>
+        </StickyCursorProvider>
 
         <style>{`
           .layout-container {

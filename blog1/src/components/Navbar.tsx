@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import ScrollVelocity from '../ui/ScrollVelocity';
 import { usePathname } from 'next/navigation';
+import MagneticButton from './MagneticButton';
 
 // Hardcoded navigation items for simplicity, as fs is not available on client side
 // Ideally these should be passed as props or fetched via API
@@ -86,11 +87,13 @@ const Navbar: React.FC = () => {
                 <Link href="/" style={{ textDecoration: 'none', color: 'inherit', fontWeight: '900', fontSize: '1.2rem' }}>
                     MIN'S PORTFOLIO
                 </Link>
-                <button onClick={toggleMenu} className="hamburger-btn">
-                    <div className={`hamburger-line ${isOpen ? 'open' : ''}`}></div>
-                    <div className={`hamburger-line ${isOpen ? 'open' : ''}`}></div>
-                    <div className={`hamburger-line ${isOpen ? 'open' : ''}`}></div>
-                </button>
+                <MagneticButton>
+                    <button onClick={toggleMenu} className="hamburger-btn">
+                        <div className={`hamburger-line ${isOpen ? 'open' : ''}`}></div>
+                        <div className={`hamburger-line ${isOpen ? 'open' : ''}`}></div>
+                        <div className={`hamburger-line ${isOpen ? 'open' : ''}`}></div>
+                    </button>
+                </MagneticButton>
             </div>
 
             {/* Mobile Overlay Menu */}
@@ -226,56 +229,75 @@ const NavLinks: React.FC<NavLinksProps> = ({ closeMenu, isMobile = false, pathna
         return isActive(path) ? `${baseClass} active` : baseClass;
     };
 
+    const MagneticWrapper = ({ children }: { children: React.ReactNode }) => (
+        <MagneticButton style={{ display: 'block', width: '100%' }}>
+            {children}
+        </MagneticButton>
+    );
+
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 'var(--spacing-xl)' : 'var(--spacing-lg)', width: '100%' }}>
-            <Link href="/resume" className={getLinkClass('/resume')} onClick={closeMenu} style={linkStyle}>Resume</Link>
-            <Link href="/about-min" className={getLinkClass('/about-min')} onClick={closeMenu} style={linkStyle}>About Min</Link>
+            <MagneticWrapper>
+                <Link href="/resume" className={getLinkClass('/resume')} onClick={closeMenu} style={linkStyle}>Resume</Link>
+            </MagneticWrapper>
+            <MagneticWrapper>
+                <Link href="/about-min" className={getLinkClass('/about-min')} onClick={closeMenu} style={linkStyle}>About Min</Link>
+            </MagneticWrapper>
 
             {/* Portfolio Section */}
             <div>
-                <Link href="/portfolio" className={getLinkClass('/portfolio')} onClick={closeMenu} style={linkStyle}>Portfolio</Link>
+                <MagneticWrapper>
+                    <Link href="/portfolio" className={getLinkClass('/portfolio')} onClick={closeMenu} style={linkStyle}>Portfolio</Link>
+                </MagneticWrapper>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)', paddingLeft: 'var(--spacing-md)' }}>
                     {portfolioItems.map(item => (
-                        <Link
-                            key={item.slug}
-                            href={`/portfolio/${item.slug}`}
-                            className={getLinkClass(`/portfolio/${item.slug}`)}
-                            onClick={closeMenu}
-                            style={subLinkStyle}
-                        >
-                            {item.title}
-                        </Link>
+                        <MagneticWrapper key={item.slug}>
+                            <Link
+                                href={`/portfolio/${item.slug}`}
+                                className={getLinkClass(`/portfolio/${item.slug}`)}
+                                onClick={closeMenu}
+                                style={subLinkStyle}
+                            >
+                                {item.title}
+                            </Link>
+                        </MagneticWrapper>
                     ))}
                 </div>
             </div>
 
             {/* Design Section */}
             <div>
-                <Link href="/design" className={getLinkClass('/design')} onClick={closeMenu} style={linkStyle}>Design</Link>
+                <MagneticWrapper>
+                    <Link href="/design" className={getLinkClass('/design')} onClick={closeMenu} style={linkStyle}>Design</Link>
+                </MagneticWrapper>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)', paddingLeft: 'var(--spacing-md)' }}>
                     {designItems.map(item => (
-                        <Link
-                            key={item.slug}
-                            href={`/portfolio/${item.slug}`}
-                            className={getLinkClass(`/portfolio/${item.slug}`)}
-                            onClick={closeMenu}
-                            style={subLinkStyle}
-                        >
-                            {item.title}
-                        </Link>
+                        <MagneticWrapper key={item.slug}>
+                            <Link
+                                href={`/portfolio/${item.slug}`}
+                                className={getLinkClass(`/portfolio/${item.slug}`)}
+                                onClick={closeMenu}
+                                style={subLinkStyle}
+                            >
+                                {item.title}
+                            </Link>
+                        </MagneticWrapper>
                     ))}
                 </div>
             </div>
 
-            <Link href="/blog" className={getLinkClass('/blog')} onClick={closeMenu} style={linkStyle}>Blog</Link>
-            <Link href="/contact" className={getLinkClass('/contact')} onClick={closeMenu} style={linkStyle}>Contact</Link>
+            <MagneticWrapper>
+                <Link href="/blog" className={getLinkClass('/blog')} onClick={closeMenu} style={linkStyle}>Blog</Link>
+            </MagneticWrapper>
+            <MagneticWrapper>
+                <Link href="/contact" className={getLinkClass('/contact')} onClick={closeMenu} style={linkStyle}>Contact</Link>
+            </MagneticWrapper>
 
             <style jsx global>{`
                 /* Prompt 2: Mobile Link Hover/Active State */
                 .neo-link-mobile {
                     display: block;
                     padding: 2px 5px;
-                    transition: background-color 0.1s steps(2), color 0.1s steps(2);
                     color: #000000;
                     text-decoration: underline;
                 }

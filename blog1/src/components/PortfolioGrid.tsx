@@ -1,6 +1,7 @@
 "use client";
 
 import DraggableCard from "@/components/DraggableCard";
+import MagneticButton from "@/components/MagneticButton";
 import Folder from "@/ui/folder";
 import Button from "@/ui/button";
 import Link from "next/link";

@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import MagneticButton from '@/components/MagneticButton';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
@@ -12,9 +15,11 @@ const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', classNam
     const finalClass = `${baseClass} ${className}`;
 
     return (
-        <button className={finalClass} {...props}>
-            {children}
-        </button>
+        <MagneticButton style={{ display: 'inline-block' }}>
+            <button className={finalClass} {...props}>
+                {children}
+            </button>
+        </MagneticButton>
     );
 };
 
