@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
                     minHeight: 0, // Critical for nested flex scrolling
                     paddingRight: '4px' // Prevent scrollbar overlapping content slightly
                 }}>
-                    <NavLinks closeMenu={() => { }} />
+                    <NavLinks closeMenu={() => { }} pathname={pathname} />
                 </div>
             </nav>
 
@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
             {isOpen && (
                 <div className="mobile-overlay">
                     <nav className="mobile-nav-content">
-                        <NavLinks closeMenu={closeMenu} isMobile={true} />
+                        <NavLinks closeMenu={closeMenu} isMobile={true} pathname={pathname} />
                     </nav>
                 </div>
             )}
@@ -197,9 +197,10 @@ const Navbar: React.FC = () => {
 interface NavLinksProps {
     closeMenu: () => void;
     isMobile?: boolean;
+    pathname: string;
 }
 
-const NavLinks: React.FC<NavLinksProps> = ({ closeMenu, isMobile = false }) => {
+const NavLinks: React.FC<NavLinksProps> = ({ closeMenu, isMobile = false, pathname }) => {
     // Shared link styles
     const linkStyle: React.CSSProperties = {
         fontSize: isMobile ? '2rem' : '1.5rem', // Prompt 2: Large text on mobile
@@ -208,31 +209,37 @@ const NavLinks: React.FC<NavLinksProps> = ({ closeMenu, isMobile = false }) => {
         textDecoration: 'underline',
         textDecorationThickness: isMobile ? '4px' : '2px', // Thicker underline on mobile
         display: 'block',
-        width: 'fit-content'
+        width: '100%' // Changed to 100% for block display
     };
 
     const subLinkStyle: React.CSSProperties = {
         fontSize: isMobile ? '1.5rem' : '1rem',
-        width: 'fit-content'
+        width: '100%' // Changed to 100% for block display
     };
 
-    // Mobile specific link class for hover effect
-    const linkClass = isMobile ? "neo-link-mobile" : "neo-link";
+    // Helper to determine if link is active
+    const isActive = (path: string) => pathname === path;
+
+    // Helper to get class string
+    const getLinkClass = (path: string) => {
+        const baseClass = isMobile ? "neo-link-mobile" : "neo-link";
+        return isActive(path) ? `${baseClass} active` : baseClass;
+    };
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 'var(--spacing-xl)' : 'var(--spacing-lg)', width: '100%' }}>
-            <Link href="/resume" className={linkClass} onClick={closeMenu} style={linkStyle}>Resume</Link>
-            <Link href="/about-min" className={linkClass} onClick={closeMenu} style={linkStyle}>About Min</Link>
+            <Link href="/resume" className={getLinkClass('/resume')} onClick={closeMenu} style={linkStyle}>Resume</Link>
+            <Link href="/about-min" className={getLinkClass('/about-min')} onClick={closeMenu} style={linkStyle}>About Min</Link>
 
             {/* Portfolio Section */}
             <div>
-                <Link href="/portfolio" className={linkClass} onClick={closeMenu} style={linkStyle}>Portfolio</Link>
+                <Link href="/portfolio" className={getLinkClass('/portfolio')} onClick={closeMenu} style={linkStyle}>Portfolio</Link>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)', paddingLeft: 'var(--spacing-md)' }}>
                     {portfolioItems.map(item => (
                         <Link
                             key={item.slug}
                             href={`/portfolio/${item.slug}`}
-                            className={linkClass}
+                            className={getLinkClass(`/portfolio/${item.slug}`)}
                             onClick={closeMenu}
                             style={subLinkStyle}
                         >
@@ -244,13 +251,13 @@ const NavLinks: React.FC<NavLinksProps> = ({ closeMenu, isMobile = false }) => {
 
             {/* Design Section */}
             <div>
-                <Link href="/design" className={linkClass} onClick={closeMenu} style={linkStyle}>Design</Link>
+                <Link href="/design" className={getLinkClass('/design')} onClick={closeMenu} style={linkStyle}>Design</Link>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)', paddingLeft: 'var(--spacing-md)' }}>
                     {designItems.map(item => (
                         <Link
                             key={item.slug}
-                            href={`/portfolio/${item.slug}`} // Assuming design also goes to portfolio slug or modify as needed
-                            className={linkClass}
+                            href={`/portfolio/${item.slug}`}
+                            className={getLinkClass(`/portfolio/${item.slug}`)}
                             onClick={closeMenu}
                             style={subLinkStyle}
                         >
@@ -260,13 +267,13 @@ const NavLinks: React.FC<NavLinksProps> = ({ closeMenu, isMobile = false }) => {
                 </div>
             </div>
 
-            <Link href="/blog" className={linkClass} onClick={closeMenu} style={linkStyle}>Blog</Link>
-            <Link href="/contact" className={linkClass} onClick={closeMenu} style={linkStyle}>Contact</Link>
+            <Link href="/blog" className={getLinkClass('/blog')} onClick={closeMenu} style={linkStyle}>Blog</Link>
+            <Link href="/contact" className={getLinkClass('/contact')} onClick={closeMenu} style={linkStyle}>Contact</Link>
 
             <style jsx global>{`
                 /* Prompt 2: Mobile Link Hover/Active State */
                 .neo-link-mobile {
-                    display: inline-block;
+                    display: block;
                     padding: 2px 5px;
                     transition: background-color 0.1s steps(2), color 0.1s steps(2);
                     color: #000000;
@@ -274,7 +281,10 @@ const NavLinks: React.FC<NavLinksProps> = ({ closeMenu, isMobile = false }) => {
                 }
                 
                 /* Inverted colors on active/hover */
-                .neo-link-mobile:active, .neo-link-mobile:hover {
+                .neo-link-mobile:active, 
+                .neo-link-mobile:hover,
+                .neo-link-mobile.active,
+                .neo-link.active {  /* Also apply to desktop active links */
                     background-color: #000000;
                     color: #FF0000; /* Prompt 2: Red text */
                     text-decoration: none;
