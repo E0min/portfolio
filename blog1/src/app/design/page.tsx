@@ -30,14 +30,17 @@ export default function DesignPage() {
 
     return (
         <main style={{ padding: 'var(--spacing-xl) var(--spacing-md)', maxWidth: '1600px', margin: '0 auto' }}>
-            <h1 style={{
-                fontSize: '3rem',
-                marginBottom: 'var(--spacing-lg)',
-                borderBottom: 'var(--border-thick)',
-                display: 'inline-block',
-                fontFamily: '"Pretendard", sans-serif',
-                fontWeight: '900'
-            }}>
+            <h1
+                className="glitch"
+                data-text="DESIGN"
+                style={{
+                    fontSize: '3rem',
+                    marginBottom: 'var(--spacing-lg)',
+                    borderBottom: 'var(--border-thick)',
+                    display: 'inline-block',
+                    fontFamily: '"Pretendard", sans-serif',
+                    fontWeight: '900'
+                }}>
                 DESIGN
             </h1>
 

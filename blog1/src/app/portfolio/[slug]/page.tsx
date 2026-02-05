@@ -121,7 +121,17 @@ export default async function PortfolioPage({ params }: { params: Promise<{ slug
                                 }}
                             />
                         ),
-                        h1: ({ node, ...props }) => <h1 style={{ fontSize: '2.5rem', borderBottom: 'var(--border-thick)', paddingBottom: 'var(--spacing-sm)', marginBottom: 'var(--spacing-lg)' }} {...props} />,
+                        h1: ({ node, ...props }) => {
+                            const text = String(props.children);
+                            return (
+                                <h1
+                                    className="glitch"
+                                    data-text={text}
+                                    style={{ fontSize: '2.5rem', borderBottom: 'var(--border-thick)', paddingBottom: 'var(--spacing-sm)', marginBottom: 'var(--spacing-lg)' }}
+                                    {...props}
+                                />
+                            );
+                        },
                         h2: ({ node, ...props }) => <h2 style={{ fontSize: '2rem', borderBottom: 'var(--border-thin)', paddingBottom: 'var(--spacing-sm)', marginTop: 'var(--spacing-xl)', marginBottom: 'var(--spacing-md)' }} {...props} />,
                         h3: ({ node, ...props }) => <h3 style={{ fontSize: '1.5rem', fontWeight: '900', marginTop: 'var(--spacing-lg)', marginBottom: 'var(--spacing-sm)' }} {...props} />,
                         p: ({ node, ...props }) => <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: 'var(--spacing-md)' }} {...props} />,

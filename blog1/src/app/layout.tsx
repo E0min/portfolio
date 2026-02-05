@@ -24,6 +24,8 @@ export const metadata: Metadata = {
   },
 };
 
+import CustomCursor from "@/components/CustomCursor";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,13 +34,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning={true}>
+        <CustomCursor />
         <div className="layout-container">
           <Navbar />
           <main className="main-content">
             {children}
           </main>
         </div>
-        
+
         <style>{`
           .layout-container {
             display: flex;

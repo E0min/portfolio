@@ -45,21 +45,21 @@ const Navbar: React.FC = () => {
                 height: '100vh',
                 width: '250px',
                 borderRight: 'var(--border-thick)',
-                padding: 'var(--spacing-md)',
+                padding: 'var(--spacing-sm)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
                 alignItems: 'flex-start',
                 backgroundColor: '#ffffff',
                 zIndex: 1000,
-                overflowY: 'auto'
+                overflow: 'hidden' // Changed from overflowY: 'auto'
             }}>
                 <div style={{
                     marginBottom: 'var(--spacing-xl)',
                     borderBottom: 'var(--border-thick)',
                     paddingBottom: 'var(--spacing-sm)',
                     width: '100%',
-                    overflow: 'hidden'
+                    flexShrink: 0 // Prevent shrinking
                 }}>
                     <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <ScrollVelocity
@@ -69,8 +69,16 @@ const Navbar: React.FC = () => {
                         />
                     </Link>
                 </div>
-                {/* Navigation Links */}
-                <NavLinks closeMenu={() => { }} />
+                {/* Navigation Links - Scrollable Area */}
+                <div style={{
+                    flex: 1,
+                    overflowY: 'auto',
+                    width: '100%',
+                    minHeight: 0, // Critical for nested flex scrolling
+                    paddingRight: '4px' // Prevent scrollbar overlapping content slightly
+                }}>
+                    <NavLinks closeMenu={() => { }} />
+                </div>
             </nav>
 
             {/* Mobile Header */}
