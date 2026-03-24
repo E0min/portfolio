@@ -1,0 +1,283 @@
+/* All Films Page Styles (Synchronized with Original) */
+
+/* Header (page-specific) */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.page-title-svg {
+    width: 37.3438vw; /* 717px */
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5625vw; /* 30px */
+    margin-bottom: 0.5208vw; /* 10px */
+}
+
+.view-toggle {
+    display: flex;
+    gap: 2.8646vw;
+    align-items: center;
+}
+
+.view-icon {
+    width: 9.7917vw;
+    height: 9.7917vw;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity 0.2s ease;
+}
+
+.view-icon.active {
+    opacity: 1;
+}
+
+.view-icon:hover {
+    opacity: 0.7;
+}
+
+/* ===== Section Subtitles ===== */
+.section-subtitle {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 6.6667vw; /* 128px */
+    font-weight: 500;
+    margin-bottom: 1.0417vw; /* 20px */
+    color: #2B2929;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+/* ===== Upcoming (Hotgirls) Masonry Grid ===== */
+.hotgirls-three-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5.2083vw; /* 100px */
+    padding: 0;
+    gap: 1.0417vw; /* 20px */
+}
+
+.hg-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0417vw;
+    flex: 534; /* Ratio based on width */
+    min-width: 0;
+}
+
+.hg-col.center {
+    flex: 775; /* Center column is wider */
+}
+
+.hg-item-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.hg-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Aspect Ratio helpers - Match original proportions */
+.portrait-tall {
+    aspect-ratio: 534 / 771;
+    height: auto;
+}
+
+.landscape {
+    aspect-ratio: 534 / 400;
+    height: auto;
+}
+
+.hg-col.center .landscape {
+    aspect-ratio: 775 / 465;
+}
+
+.hg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.4688vw; /* 9px */
+    box-shadow: 0 0.2083vw 0.2083vw rgba(0, 0, 0, 0.25);
+}
+
+.hg-caption {
+    display: block;
+    margin-top: 0.5208vw;
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.6667vw; /* 32px */
+    font-weight: 300;
+    color: #000;
+}
+
+/* ===== AllFilms Grid ===== */
+.allfilms-grid-sec {
+    margin-bottom: 5.2083vw;
+}
+
+.films-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.0417vw;
+    row-gap: 7.0312vw; /* 135px */
+    margin-top: 1.0417vw;
+}
+
+.film-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2604vw;
+    text-decoration: none;
+    color: inherit;
+}
+
+.film-img {
+    width: 100%;
+    height: 19.9479vw; /* 383px */
+    border-radius: 0.4688vw;
+    overflow: hidden;
+    box-shadow: 0 0.2083vw 0.2083vw rgba(0, 0, 0, 0.25);
+    background-color: #f0f0f0;
+}
+
+.film-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.film-img.coming-soon {
+    position: relative;
+}
+
+.coming-soon-label {
+    position: absolute;
+    top: 0.7813vw;
+    left: 0.5208vw;
+    font-family: var(--font-oswald), sans-serif;
+    font-weight: 300;
+    font-size: 1.4583vw;
+    color: #fff;
+}
+
+.film-title {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.6667vw;
+    font-weight: 300;
+}
+
+.film-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.2604vw;
+}
+
+.film-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.1042vw;
+}
+
+.film-academy-icon {
+    width: 1.4583vw;
+    height: 2.6042vw;
+    object-fit: contain;
+}
+
+.film-award-badge {
+    height: 2.8125vw;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ===== Text List Section ===== */
+.text-list-sec {
+    position: relative;
+    padding: 0;
+    margin-bottom: 5.2083vw;
+    overflow: hidden;
+}
+
+.large-text-list {
+    list-style: none;
+    margin-bottom: 2.0833vw;
+}
+
+.large-text-list li {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 8.0729vw; /* 155px */
+    font-weight: 500;
+    line-height: 0.9;
+    color: #2B2929;
+    cursor: pointer;
+    transition: color 0.2s;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.0417vw;
+    position: relative;
+    z-index: 2;
+}
+
+.large-text-list li:hover {
+    color: #000;
+}
+
+.large-text-list li sup {
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 1.2500vw; /* 24px */
+    font-weight: 400;
+    color: #2B2929;
+    vertical-align: super;
+    margin-left: 0.5208vw;
+    letter-spacing: 0.175vw;
+}
+
+.show-more {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.8750vw; /* 36px */
+    font-weight: 500;
+    margin-top: 1.5625vw;
+    cursor: pointer;
+    color: #2B2929;
+    display: flex;
+    align-items: center;
+    gap: 0.5208vw;
+}
+
+.list-hover-img {
+    position: absolute;
+    top: 50%;
+    right: 1.0417vw;
+    transform: translateY(-50%);
+    width: 57.2917vw; /* 1100px */
+    height: auto;
+    aspect-ratio: 1100 / 860;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.list-hover-img .hover-preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+}
+
+.hidden {
+    display: none !important;
+}

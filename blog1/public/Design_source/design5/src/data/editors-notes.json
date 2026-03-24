@@ -1,0 +1,236 @@
+[
+  {
+    "slug": "anatomy-of-a-fall",
+    "title": "anatoMY OF A FALL",
+    "year": "2023",
+    "layout": "showcase",
+    "theme": "theme-navy",
+    "heroImg": "/images/page/editors_note/anatomy/hero.png",
+    "poster": "/images/page/editors_note/anatomy/poster.png",
+    "ratingImg": "/images/page/editors_note/anatomy/rating.png",
+    "synopsis": "When Samuel is found dead, the police question if he was murdered or if he committed suicide and his wife Sandra becomes the main suspect. The investigation leads to an unsettling journey into the depths of their conflicted relationship.",
+    "awards": [
+      { "festival": "ACADEMY AWARDS ®", "detail": "Winner – Original Screenplay (Justine Triet, Arthur Harari)", "icon": "/images/page/editors_note/anatomy/academy_icon.png" },
+      { "festival": "CANNES FILM FESTIVAL", "detail": "Winner – Palme d’Or", "icon": "/images/page/editors_note/anatomy/cannes_icon.png" }
+    ],
+    "credits": {
+      "directedBy": "Justine Triet",
+      "writtenBy": "Justine Triet, Arthur Harari",
+      "starring": ["Sandra Hüller", "Swann Arlaud", "Milo Machado Graner"]
+    },
+    "scene": {
+      "img": "/images/page/editors_note/anatomy/scene.png",
+      "quote": "“A masterpiece of psychological tension”"
+    },
+    "directorSpotlight": {
+      "photo": "/images/page/editors_note/anatomy/director.png",
+      "role": "Director of Anatomy of a Fall",
+      "name": ["JUSTINE", "TRIET"],
+      "quote": "“My intention was to create a film that portrays the downfall of a couple’s relationship. The concept was to depict the physical and emotional descent of a body in a technical manner.”"
+    },
+    "gallery": [
+      "/images/page/editors_note/anatomy/gallery_1.png",
+      "/images/page/editors_note/anatomy/gallery_2.png"
+    ],
+    "footerImg": "/images/page/editors_note/anatomy/footer.png"
+  },
+  {
+    "slug": "anora",
+    "title": "ANORA",
+    "year": "2024",
+    "layout": "showcase",
+    "theme": "theme-pink",
+    "heroImg": "/images/page/editors_note/anora/hero.png",
+    "poster": "/images/page/editors_note/anora/poster.png",
+    "ratingImg": "/images/page/editors_note/anora/rating.png",
+    "synopsis": "Anora, a young woman from Brooklyn, gets her chance at a Cinderella story when she meets and impulsively marries the son of an oligarch. Once the news reaches Russia, her fairytale is threatened as the parents set out for New York to get the marriage annulled.",
+    "awards": [
+      { "festival": "ACADEMY AWARDS ®", "detail": "5X Winner – Best Picture, Best Director, Best Actress, Best Original Screenplay, Best Film Editing", "icon": "/images/page/editors_note/anora/academy_icon.png" },
+      { "festival": "CANNES FILM FESTIVAL", "detail": "Winner – Palme d’Or", "icon": "/images/page/editors_note/anora/cannes_icon.png" }
+    ],
+    "credits": {
+      "directedBy": "Sean Baker",
+      "writtenBy": "Sean Baker",
+      "starring": ["Mikey Madison", "Mark Eydelshteyn", "Yura Borisov", "Vache Tovmasyan"]
+    },
+    "scene": {
+      "img": "/images/page/editors_note/anora/scene.png",
+      "quote": "“A thriller of reaL<br>psychological depth”"
+    },
+    "directorSpotlight": {
+      "photo": "/images/page/editors_note/anora/director.png",
+      "role": "Director of ANORA",
+      "name": ["SEAN", "BAKER"],
+      "quote": "“I don’t think you can pin this movie down and describe it easily as one thing. As the story and feeling changes, our approach and the language changes also.”"
+    },
+    "gallery": [
+      "/images/page/editors_note/anora/gallery_1.png",
+      "/images/page/editors_note/anora/gallery_2.png"
+    ],
+    "footerImg": "/images/page/editors_note/anora/footer.png"
+  },
+  {
+    "slug": "parasite",
+    "title": "paRASITE",
+    "year": "2019",
+    "layout": "showcase",
+    "theme": "theme-slate",
+    "heroImg": "/images/page/editors_note/parasite/hero_overlay.png",
+    "poster": "/images/page/editors_note/parasite/poster.png",
+    "ratingImg": "/images/page/editors_note/parasite/rating.png",
+    "synopsis": "Greed and class discrimination threaten the relationship between the wealthy Park family and the destitute Kim clan in Bong Joon Ho’s darkly hilarious modern fairytale.",
+    "awards": [
+      { "festival": "ACADEMY AWARDS ®", "detail": "4X Winner – Best Picture, Best Director, Best Original Screenplay, Best International Feature", "icon": "/images/page/editors_note/parasite/academy_icon.png" },
+      { "festival": "CANNES FILM FESTIVAL", "detail": "Winner – Palme d’Or", "icon": "/images/page/editors_note/parasite/cannes_icon.png" }
+    ],
+    "credits": {
+      "directedBy": "Bong Joon Ho",
+      "writtenBy": "Bong Joon Ho, Han Jin Won",
+      "starring": ["Song Kang Ho", "Chang Hye Jin"]
+    },
+    "scene": {
+      "img": "/images/page/editors_note/parasite/scene.png",
+      "quote": "“A comedy without clowns, a tragedy without villains”"
+    },
+    "directorSpotlight": {
+      "photo": "/images/page/editors_note/parasite/director.png",
+      "role": "Director of Parasite",
+      "name": ["BONG", "JOON-HO"],
+      "quote": "“그들이 처음부터 기생충이었던 것은 아니다. 그들은 우리의 이웃이자 친구이며 동료들이다. 다만 벼랑 끝으로 밀려났을 뿐이다.”"
+    },
+    "gallery": [
+      "/images/page/editors_note/parasite/gallery_1.png",
+      "/images/page/editors_note/parasite/gallery_2.png"
+    ],
+    "footerImg": "/images/page/editors_note/parasite/footer.png"
+  },
+  {
+    "slug": "triangle-of-sadness",
+    "title": "triangle of SADNESS",
+    "year": "2022",
+    "layout": "showcase",
+    "theme": "theme-blue",
+    "heroImg": "/images/page/editors_note/triangle/hero.png",
+    "poster": "/images/page/editors_note/triangle/poster.png",
+    "ratingImg": "/images/page/editors_note/triangle/rating.png",
+    "synopsis": "A celebrity model couple are invited on a luxury cruise for the uber-rich, helmed by an unhinged boat captain. What first appeared instagrammable ends catastrophically, leaving the survivors stranded on a desert island.",
+    "awards": [
+      { "festival": "ACADEMY AWARDS ®", "detail": "3X Nominee – Best Picture, Best Director, Best Original Screenplay", "icon": "/images/page/editors_note/triangle/academy_icon.png" },
+      { "festival": "CANNES FILM FESTIVAL", "detail": "Winner – Palme d’Or", "icon": "/images/page/editors_note/triangle/cannes_icon.png" }
+    ],
+    "credits": {
+      "directedBy": "Ruben Östlund",
+      "writtenBy": "Ruben Östlund",
+      "starring": ["Harris Dickinson", "Charlbi Dean", "Woody Harrelson"]
+    },
+    "scene": {
+      "img": "/images/page/editors_note/triangle/scene.png",
+      "quote": "“A biting satire of the super-rich”"
+    },
+    "directorSpotlight": {
+      "photo": "/images/page/editors_note/triangle/director.png",
+      "role": "Director of Triangle of Sadness",
+      "name": ["RUBEN", "ÖSTLUND"],
+      "quote": "“As with all my films, my starting point is to look at human behavior. Many scenes have a connection to a sociological study.”"
+    },
+    "gallery": [
+      "/images/page/editors_note/triangle/scene.png",
+      "/images/page/editors_note/triangle/gallery_2.png"
+    ],
+    "footerImg": "/images/page/editors_note/triangle/scene.png"
+  },
+  {
+    "slug": "past-lives",
+    "title": "Space & Time: A Note from Celine Song",
+    "year": "2023",
+    "layout": "article",
+    "heroImg": "/images/page/editors_note/past_lives_hero.png",
+    "credits": {
+      "directedBy": "Celine Song",
+      "writtenBy": "Celine Song",
+      "starring": ["Greta Lee", "Teo Yoo", "John Magaro"]
+    },
+    "content": "<p>안녕하세요.<br>저는 제가 살고 있는 도시, 뉴욕시의 제 아파트에서 이 글을 씁니다.<br>그리고 지금 이 글을 읽고 있는 당신이 살고 있거나, 혹은 우연히 머물고 있는 그 도시 어딘가로 이 말을 보냅니다.<br>부탁 하나를 하려고요. 제 영화《패스트 라이브즈》를 극장에서 봐주세요.</p><p>이 영화는 제가 처음으로 만든 영화이고, 저는 이 영화를 정말 많이 사랑합니다.<br>결점도, 초보자로서의 실수도, 한계도 모두 포함해서 이 영화가 가진 모든 것을 사랑해요.<br>함께 만들어간 재능 있고, 친절하고, 아름다운 사람들 때문에도 이 영화를 사랑합니다.<br>하지만 무엇보다도, 이 영화가 저를 정말 많은 도시로,<br>당신 근처의 정말 많은 극장으로 데려다주었기 때문에<br>저는 이 영화에 가장 깊이 감사하고 있습니다.</p><p>이 영화는 제 삶에서 영감을 받은 작품이고, 여러 가지에 대해 이야기합니다.<br>첫사랑, 살아보지 못한 삶들, 성장,<br>그리고 우리 안에 존재하는 과거와 현재의 수많은 ‘나’들을 놓아주고<br>또 그들을 위한 자리를 만들어주는 일에 대해서요.<br>하지만 이 영화는 근본적으로 도시에 관한 영화이기도 합니다.<br>각 도시가 얼마나 고유한지,<br>또 얼마나 많은 공통점을 가지고 있는지,<br>그리고 서로가 얼마나, 얼마나 멀리 떨어져 있는지에 대한 이야기입니다.</p><figure class='article-image'><img src='/images/page/editors_note/past_lives_scene_1.png' alt='Past Lives scene'></figure><p>제 영화의 많은 부분은 뉴욕에서 펼쳐집니다.<br>2011년, 극작가가 되기 위해 이곳으로 이주한 이후 제가 ‘집’이라고 불러온 도시입니다.<br>아주 많은 사람들에게 그렇듯, 뉴욕은 제 인생에서 가장 위대한 사랑 중 하나예요.</p><p>영화의 상당 부분은 서울에서도 이루어집니다. 한때 제가 집이라고 불렀던 곳이죠. 2000년에 떠난 이후,<br>2021년 가을 이 영화를 만들기 위해 다시 돌아가기 전까지는<br>제 기억 속에서 거의 완전히 희미해졌던 도시였습니다.</p><p>영화에는 토론토가 등장하는 순간들도 있습니다.<br>제가 어린 시절과 십 대, 그리고 젊은 성인기의 많은 시간을 보낸 곳이죠.</p><p>심지어 몬탁에서의 한 시퀀스도 등장합니다. 그곳은 제가 전혀 예상하지 못했던 방식으로 제 인생을 바꿔놓은 장소이지만, 아직 영화를 보지 않으셨을 테니 스포일러가 될까봐 여기서는 자세히 말하지 않겠습니다.</p><p>이 영화는 제 감정 세계의 어떤 한 구석을 담은 지도이기도 하지만,<br>동시에 제가 실제로 지나온 장소들,<br>공간과 시간을 가로질러 제가 그려온 경로를 담은 아주 구체적인 지도이기도 합니다.</p><p>그래서 이 영화를 세상에 선보이는 과정 자체가 하나의 세계 여행이 된 것,<br>마치 외교 사절단의 순회와도 같은 여정이 된 것이 어쩐지 잘 어울린다고 느꼈습니다.</p><p>저는 이 영화를 들고 낯선 도시들에 도착할 때마다 마치 외국의 사절이 된 기분이 들었습니다.<br>제 안에 담긴 도시들에 대한, 이 작고 개인적인 기록을 들고 나타나 그곳의 사람들에게 어떤 교환을 요청하는 사람처럼요.</p><p>“자, 이리로 모여 주세요. 제가 어디에서 왔고, 어디를 지나왔는지 들려드릴게요.”</p><p>하지만 물론, 결국 제가 바라는 것은 이 영화를 보는 경험이 무엇보다도 ‘저’에 대한 경험으로 남지 않는 것입니다.</p><p>이 영화를 보러 오신 당신에게 제가 바라는 건, 이 영화가 당신 자신 안으로 떠나는 여행이 되어 주는 일이에요.<br>당신이 갈 수도 있었던 장소들, 미처 알아차리지 못한 채 이미 지나온 곳들, 혹은 설명할 수 없지만 어쩐지 다른 삶에서 한 번쯤 다녀온 것만 같은 장소들까지.</p><p>저는 당신이 이 영화를 지금 당신이 머물고 있는 바로 그 도시에서 보기를 바랍니다.<br>어디든, 당신이 지금 있는 그곳에서요.</p><p>그리고 이 영화가 당신에게 당신이 얼마나 크고, 또 얼마나 작은 존재인지를 깨닫게 해주기를 바랍니다.</p><p>당신은 수많은 세계를 품고 있으면서도, 동시에 공간과 시간 속 단 하나의 지점에 잔인할 만큼, 그리고 아름다울 만큼</p><figure class='article-image'><img src='/images/page/editors_note/past_lives_scene_2.png' alt='Past Lives scene'></figure><p>물론, 극장에 가는 일이 언제나 그렇게 쉽지만은 않다는 것도 잘 알고 있습니다.<br>어떤 때는, 그 극장이 그리 가까운 곳에 있지도 않죠. 차를 타야 하거나, 기차를 타야 할 수도 있고,<br>아이를 맡길 사람을 구해야 할 수도 있고, 시간을 따로 내야 할 수도 있습니다.</p><p>여행을 계획하듯 준비가 필요한 일이죠.</p><p>당신은 지금, ‘당신 근처의 극장’어딘가로 향하고 있으니까요.</p><p>제 경우에는, ‘당신 근처의 극장’이라는 말이 우스울 만큼 말 그대로의 의미입니다.</p><p>뉴욕에 있는 제 아파트는 현재 제 영화를 상영 중인 영화관 바로 위에 있거든요.</p><p>그래서 집을 나서 무슨 일을 하러 가든, 저는 늘 그 영화관 앞을 지나게 됩니다.<br>극장에서 막 나오는 사람들, 이제 막 들어가려는 사람들을 보면서 저 혼자만의 작은 게임을 하게 되죠.</p><p>이 사람들 중 누가 〈패스트 라이브즈〉를 보러 가는 걸까, 누가〈트랜스포머〉를 보러 가는 걸까.<br>이들 중 누가 내 이웃일까, 누가 나와 같은 건물에 사는 사람일까.</p><p>지난 몇 주 동안, 제 영화를 보고 나온 누군가와 아무것도 모른 채 같은 엘리베이터를 탄 적은 과연 몇 번이나 되었을까요. 요즘은 건물 안에서든, 거리에서든 제가 마주치는 모든 사람이 갑자기 가능성과 호기심으로 가득 차 보입니다. 언젠가 최근에, 혹은 머지않은 어느 날 그들이 아래층으로 내려가 우리 동네 영화관, 바로 그 극장으로 가서 제가 지나온 어떤 장소들을 잠시나마 함께 방문했을지도 모른다는 생각 때문이죠.</p><p>그들은 한 시간 남짓한 시간 동안 저를 알게 될지도 모르고, 어쩌면 어떤 삼투 작용처럼 저 역시 그들을 조금은 알게 될지도 몰럼니다.</p><p>지금 이 순간에도 전 세계 곳곳에서 적어도 많은 도시들에서<br>비슷한 경험을 하고 있는 사람들이 있다는 생각을 하면, 솔직히 말해 그 감정을 감당하기가 벅찰 정도입니다.</p><p>현실 같지 않을 만큼 비현실적이고, 몸 둘 바를 모를 만큼 민망하면서도, 동시에 생기를 불어넣는 경험이에요.</p><p>끝으로 어디에 계시든, 지금 머물고 있는 도시가 어디든,〈패스트 라이브즈〉를 보기 위해 길을 나서 주신다면 그 사실만으로도 저는 언제까지나 깊이 감사한 마음을 느낍니다.</p><p>아주 잠깐일지라도, 어둠 속에서 함께 여행하며 서로를 알아갈 수 있게 되어 저는 진심으로 설레요.</p><p>당신의 가까운 극장에서 이 영화와 함께할 수 있다는 것은 저에게 큰 영광이자 깊은 특권입니다.</p><p>그럼 그곳에서 뵙겠습니다.</p><p class='article-signature'>Celine Song</p><figure class='article-image'><img src='/images/page/editors_note/past_lives_scene_3.png' alt='Past Lives scene'></figure><p class='article-source'>출처 : A24 (<a href='https://a24films.com' target='_blank'>https://a24films.com</a>)</p>",
+    "footerImg": "/images/page/editors_note/no_other_choice_footer.png"
+  },
+  {
+    "slug": "no-other-choice",
+    "title": "no other choice",
+    "year": "2025",
+    "layout": "showcase",
+    "theme": "theme-red",
+    "heroImg": "/images/page/editors_note/no_other_choice/hero.png",
+    "poster": "/images/page/editors_note/no_other_choice/poster.png",
+    "synopsis": "A tense and bloody vision of justice, directed by the master of vengeance Park Chan-wook.",
+    "awards": [],
+    "credits": {
+      "directedBy": "Park Chan-wook",
+      "writtenBy": "Park Chan-wook",
+      "starring": ["Lee Byung-hun", "Son Ye-jin"]
+    },
+    "scene": {
+      "img": "/images/page/editors_note/no_other_choice/scene.png",
+      "quote": "“A bleak and bloody vision”"
+    },
+    "directorSpotlight": {
+      "photo": "/images/page/editors_note/no_other_choice/director.png",
+      "role": "Director of No Other Choice",
+      "name": ["PARK", "CHAN-WOOK"],
+      "quote": "“I wanted to explore the boundaries of revenge and justice in a modern setting.”"
+    },
+    "gallery": [
+      "/images/page/editors_note/no_other_choice/gallery_1.png",
+      "/images/page/editors_note/no_other_choice/gallery_2.png"
+    ],
+    "footerImg": "/images/page/editors_note/no_other_choice/hero.png"
+  },
+  {
+    "slug": "it-was-just-an-accident",
+    "title": "It Was Just An Accident",
+    "year": "2025",
+    "layout": "showcase",
+    "theme": "theme-red",
+    "heroImg": "/images/page/editors_note/accident/hero.png",
+    "poster": "/images/page/editors_note/accident/poster.png",
+    "synopsis": "A mysterious incident leads to an unexpected journey into the heart of modern Iran.",
+    "awards": [],
+    "credits": {
+      "directedBy": "Jafar Panahi",
+      "writtenBy": "Jafar Panahi",
+      "starring": ["Various Artists"]
+    },
+    "scene": {
+      "img": "/images/page/editors_note/accident/scene.png",
+      "quote": "“Reality is the ultimate accident”"
+    },
+    "directorSpotlight": {
+      "photo": "/images/page/editors_note/accident/director.png",
+      "role": "Director of It Was Just An Accident",
+      "name": ["JAFAR", "PANAHI"],
+      "quote": "“Cinema is my way of breathing and resisting.”"
+    },
+    "gallery": [
+      "/images/page/editors_note/accident/gallery_1.png",
+      "/images/page/editors_note/accident/gallery_2.png"
+    ],
+    "footerImg": "/images/page/editors_note/accident/footer.png"
+  },
+  {
+    "slug": "sirat",
+    "title": "The Film Everyone Is Arguing About: Sirāt",
+    "year": "2024",
+    "layout": "article",
+    "heroImg": "/images/page/editors_note/sirat_hero.png",
+    "awards": [
+      { "festival": "CANNES FILM FESTIVAL", "detail": "Winner – Jury Prize", "icon": "/images/page/editors_note/anatomy/cannes_icon.png" },
+      { "festival": "CANNES FILM FESTIVAL", "detail": "Winner – Best Soundtrack", "icon": "/images/page/editors_note/anatomy/cannes_icon.png" }
+    ],
+    "credits": {
+      "directedBy": "Oliver Laxe",
+      "writtenBy": "Oliver Laxe",
+      "starring": ["Sergi López", "Bruno Núñez Arjona", "Jade Oukid"]
+    },
+    "content": "<h2 class='article-heading'>A Journey of Adventure Filmed in the Desert—<br>The Spectacle of Cinema Revealed by the “Real”</h2><p>Philosopher Friedrich Nietzsche once declared, “I would believe only in a god who could dance.” It was a paradoxical way of saying that only what affirms human freedom can become a true form of faith. By that logic, how should we understand the god who chooses the dancers that fill Sirat? Winner of the Jury Prize at the 78th Cannes Film Festival, the film also claimed another trophy: Best Soundtrack. This award recognizes the cinematic achievement forged by the experimental music that echoes across the desert. In the film, that music becomes nothing less than an electronic requiem — a lament that consoles the death and despair drifting through the vast sands. God and music, human fate and the desert. Somewhere in between them stands Sirat, a film that has stunned audiences around the world since its first screening in Cannes.</p><h3 class='article-subheading'>People Who Keep Dancing at the End of the World</h3><p>Sirat refers, in Islam, to the bridge that connects this world to the afterlife. The film opens with a chilling warning tied to that place: “Let those who seek to cross beware. The path is thinner than a strand of hair and sharper than the edge of a blade.”</p><p>As the frailty of humanity—so earnestly reaching for salvation—begins to feel almost awkward, the screen soon opens onto a vast desert, clouds of dust rising into the air. Amid the frantic movements of workers hauling and stacking massive, heavy objects, the imposing presence of giant speakers slowly comes into view.</p><figure class='article-image'><img src='/images/page/editors_note/sirat_scene_1.png' alt='Sirāt scene'></figure><p>From rows of speakers stacked against the backdrop of steep canyons, electronic music pours out — low, pounding beats that throb against the heart. It is the beginning of a party that goes on day and night. A rave is a gathering where people dance to electronic music in large spaces like warehouses or clubs. The ravers who embrace this culture and roam in pursuit of alternative communal living surrender themselves, as one character puts it, to “music not meant to be listened to, but to be danced to.”</p><p>Sirat opens with the fastest and most effective passage between the movie theater and the desert rave. That is also why every raver in the film is played not by professional actors, but by real ravers. As crowds fall into ecstatic, self-forgetting movement—dancing freely to their own rhythms, day and night—two strangers who seem utterly out of place appear, and Sirat truly begins.</p><p>They are Luis (Sergi López), who has come in search of his daughter who left home to attend a rave, and his young son Esteban (Bruno Núñez Arjona), who have wandered all the way here.</p><p>While the party in the desert continues, the outside world begins to feel as though war has broken out. Lines of military transport vehicles carrying civilians heighten the atmosphere of unease. Still, neither the will to dance nor the determination to find family is easily broken. When a group led by Jade (Jade Oukid) breaks away from the convoy to head toward another desert rave, Luis and Esteban—having no other option—follow them. As the truck carrying them races through the wasteland with no clear destination, the radio broadcasts reports of civilians trying to cross borders and statements from international organizations.</p><p>With the end of the world seemingly just inches away, they do not stop—even in a barren landscape where nothing but dust fills the air.</p><figure class='article-image'><img src='/images/page/editors_note/sirat_scene_2.png' alt='Sirāt scene'></figure><p>The desert of Sirat passes through the post-apocalyptic imagination embodied by the Mad Max series, yet becomes a nomads’ realm that reconfigures the harshness of the Western into an entirely different landscape. It overwhelms not through grandeur or beauty, but through the opposite: an indifferent, boundless vastness. Its immensity is so extreme that it begins to feel almost like outer space. Within it, the characters’ goals — to reach another rave, to find their family — slowly begin to fade. The desert road grows ever more treacherous, to the point of separating life from death, yet they keep moving forward. There is no other choice.</p><figure class='article-image'><img src='/images/page/editors_note/sirat_scene_3.png' alt='Sirāt scene'></figure><h3 class='article-subheading'>Confronting the Fragility of Life and a Cruel Fate</h3><p>As the journey continues, a loose sense of solidarity begins to form between Jade’s group and Luis and his son. Even without any shared interests, the simple acts of sharing food and fuel, of offering compassion and help, become their oasis. The humanity they show by refusing to betray one another gives the audience a moment of reassurance. Though the characters’ individual backstories are never fully spelled out, the bodies of the ravers — some missing arms or legs — begin to reveal the lives they have lived.</p><p>From this point on, however, director Oliver Laxe deliberately turns against the audience’s expectations. A succession of tragedies, each defying prediction, comes crashing down with shocking force. The desert on which these people now stand — freed from all social and cultural systems that once surrounded them — becomes a testing ground where only two paths remain clear: life or death. Caught in the relentless pulse of the music, the roar of engines, and the threatening howl of the wind, the sudden arrival of silence becomes Sirat’s most ultimate form of terror.</p><p>In the face of unrelenting suffering, everyone turns to God — yet neither recognition nor mercy appears. If a god does exist in Sirat, it is surely one that dispenses only merciless and cruel punishment. The characters match beings who have entrusted their fate to a roll of the dice, and the desert begins to resemble a vast purgatory that imprisons them. Only then does the truth sink in: this is a path thinner than a strand of hair and sharper than a blade.</p><p>Life is cruel precisely because even what lies right before our eyes cannot be predicted — and that, too, is human destiny. We try to protect ourselves by inventing chains of cause and effect to explain the incomprehensible, yet not every shape of life can be accounted for in this way. Death, above all, defies it. Luis’s journey, as he slowly comes to accept all of this, begins to resemble that of a broken hero who has lost everything. As the desert once again transforms into a spiritual and mythic landscape, the rave music — once nothing but noise — begins to sound like music to Luis as well. The dancing bodies now seem like rituals that expose pain and resist the fragility of life.</p><p>And yet this is not a film that surrenders to the defeatist idea that everything is governed by an uncontrollable fate. On the contrary, it speaks more clearly about life in the face of suffering and death. Because life is unpredictable, we must endure and cross the barren desert and keep moving forward. Even when an age of chaos and apocalypse arrives, we must not stop. Rather than standing still in fear of the death beneath our feet, we must dance — even if only a dance of oblivion — to confront our pain. What becomes clear, above all, is that we must not stop.</p><p>The act of filming this movie in a real desert, facing sandstorms with a film camera in hand, is itself a path of adventure beyond safe choices. Space, music, and a story designed to shock all exist to push cinematic immersion to its extreme. In an age where nearly everything the human mind can imagine can be rendered as an image, the spectacle that only the “real” can create — as in this film’s experiment — may be the cinema’s final proving ground.</p><p class='article-source'>Source: Sisa Journal (<a href='https://www.sisajournal.com' target='_blank'>https://www.sisajournal.com</a>)</p>",
+    "footerImg": "/images/page/editors_note/no_other_choice_footer.png"
+  }
+]

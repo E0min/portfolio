@@ -20,7 +20,8 @@ const designItems = [
     { slug: 'design4', title: 'Firebase Hosting' },
     { slug: 'design5', title: 'Mean Girls' },
     { slug: 'design6', title: 'Fireworks' },
-    { slug: 'design7', title: 'Dankook Univ. ID Card' }
+    { slug: 'design7', title: 'Dankook Univ. ID Card' },
+    { slug: 'design8', title: 'Project Eight' }
 ];
 
 const Navbar: React.FC = () => {

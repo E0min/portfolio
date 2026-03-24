@@ -1,26 +1,65 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Mean Girls Project Loaded');
 
-    // Example interaction: Log clicks on movie items
-    const movies = document.querySelectorAll('.movie-item');
-    movies.forEach(movie => {
-        movie.addEventListener('click', () => {
-            console.log(`Clicked on: ${movie.innerText}`);
+    // MAIN CUSTOM CURSOR LOGIC
+    const mainCursor = document.createElement('div');
+    mainCursor.classList.add('custom-cursor');
+    document.body.appendChild(mainCursor);
+
+    // Detect cursor color from site title
+    const siteTitle = document.querySelector('.site-title') || document.querySelector('.showcase-site-title') || document.querySelector('.editor-site-title');
+    let cursorColor = '#C45481';
+    if (siteTitle) {
+        const computed = getComputedStyle(siteTitle).color;
+        if (computed) cursorColor = computed;
+    }
+
+    // Generate SVG cursor with the detected color
+    const cursorSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="114" height="117" viewBox="0 0 114 117" fill="none"><path d="M57.25 0.75V115.75M57.25 115.75L0.75 60.75M57.25 115.75L112.75 60.75" stroke="${cursorColor}" stroke-width="1.5" stroke-linecap="round"/></svg>`;
+    mainCursor.style.backgroundImage = `url("data:image/svg+xml,${encodeURIComponent(cursorSVG)}")`;
+
+    document.addEventListener('mousemove', (e) => {
+        mainCursor.style.display = 'block';
+        mainCursor.style.left = e.clientX + 'px';
+        mainCursor.style.top = e.clientY + 'px';
+    });
+
+    document.addEventListener('mouseout', (e) => {
+        if (!e.relatedTarget && !e.toElement) {
+            mainCursor.style.display = 'none';
+        }
+    });
+    document.addEventListener('mouseenter', () => {
+        mainCursor.style.display = 'block';
+    });
+
+    // Cursor direction change on interactive elements
+    const interactiveEls = document.querySelectorAll('a, button, .social-card, .film-card, .gallery-item, .list-row, .view-icon, .show-more, .showcase-show-more, .large-text-list li, .showcase-text-list li, .tab, .hg-item');
+    interactiveEls.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            const dir = el.getAttribute('data-cursor-dir') || 'right';
+            mainCursor.classList.remove('cursor-right', 'cursor-left');
+            mainCursor.classList.add(`cursor-${dir}`);
+        });
+        el.addEventListener('mouseleave', () => {
+            mainCursor.classList.remove('cursor-right', 'cursor-left');
         });
     });
     // List Hover interaction
-    const listItems = document.querySelectorAll('.large-text-list li');
+    const listItems = document.querySelectorAll('.large-text-list li, .showcase-text-list li');
     const hoverImgContainer = document.querySelector('.list-hover-img');
-    const hoverPlaceholder = hoverImgContainer ? hoverImgContainer.querySelector('.placeholder-img') : null;
+    const hoverPreviewImg = hoverImgContainer ? hoverImgContainer.querySelector('.hover-preview-img') : null;
 
-    if (listItems.length && hoverImgContainer) {
+    // Determine image base path based on page depth
+    const isSubDir = document.querySelector('.showcase-text-list') !== null;
+    const imgBasePath = isSubDir ? '../../images/page/all_films/' : '../images/page/all_films/';
+
+    if (listItems.length && hoverImgContainer && hoverPreviewImg) {
         listItems.forEach(item => {
             item.addEventListener('mouseenter', () => {
-                const imageName = item.getAttribute('data-image');
-                // In a real scenario, you'd swap the src here based on imageName
-                if (hoverPlaceholder) {
-                    hoverPlaceholder.innerText = `Image for ${item.innerText.split(' ')[0]}`; // Just for demo
-                    // hoverPlaceholder.style.backgroundImage = `url(images/${imageName}.jpg)`; 
+                const imgPath = item.getAttribute('data-image');
+                if (imgPath) {
+                    hoverPreviewImg.src = `${imgBasePath}${imgPath}`;
                 }
                 hoverImgContainer.style.opacity = '1';
             });
@@ -29,9 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 hoverImgContainer.style.opacity = '0';
             });
         });
-
-        // Optional: Move image with cursor? User said "below text" (z-index) but maybe fixed position is fine.
-        // For now, fixed center as per CSS.
     }
 
     // Grid/List View Toggle
@@ -44,37 +80,58 @@ document.addEventListener('DOMContentLoaded', () => {
         btnGrid.addEventListener('click', () => {
             viewGrid.classList.remove('hidden');
             viewList.classList.add('hidden');
+            btnGrid.classList.add('active');
+            btnList.classList.remove('active');
         });
 
         btnList.addEventListener('click', () => {
             viewGrid.classList.add('hidden');
             viewList.classList.remove('hidden');
+            btnList.classList.add('active');
+            btnGrid.classList.remove('active');
+        });
+    }
+
+    // Docs Tabs Toggle
+    const docsTabs = document.querySelectorAll('.docs-tabs .tab');
+    const tabSections = document.querySelectorAll('.docs-articles[data-tab]');
+    if (docsTabs.length && tabSections.length) {
+        docsTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                docsTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const selected = tab.textContent.trim().toLowerCase();
+                tabSections.forEach(section => {
+                    if (selected === 'all') {
+                        section.classList.remove('hidden');
+                    } else if (section.dataset.tab === selected) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                });
+            });
         });
     }
 
     // Detail List Cursor Hover Effect
     const listRows = document.querySelectorAll('.list-row');
     const cursorImg = document.getElementById('cursor-img');
-    const cursorPlaceholder = cursorImg ? cursorImg.querySelector('.placeholder-img') : null;
+    const cursorPosterImg = cursorImg ? cursorImg.querySelector('.cursor-poster-img') : null;
 
     if (listRows.length && cursorImg) {
-        // Move cursor image
         document.addEventListener('mousemove', (e) => {
-            // Only move if visible to save performance? 
-            // Or just update always.
-            // Using requestAnimationFrame for smoothness could be better, but direct is ok for simple setup.
             const x = e.clientX;
             const y = e.clientY;
-            // Center the image on cursor
-            cursorImg.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+            cursorImg.style.transform = `translate(${x + 15}px, ${y + 15}px)`;
         });
 
         listRows.forEach(row => {
             row.addEventListener('mouseenter', () => {
-                const imgKey = row.getAttribute('data-image');
-                if (cursorPlaceholder) {
-                    cursorPlaceholder.innerText = imgKey; // Just for demo
-                    // In real app: cursorImg.querySelector('img').src = `images/${imgKey}.jpg`;
+                const imgPath = row.getAttribute('data-image');
+                if (cursorPosterImg && imgPath) {
+                    cursorPosterImg.src = `../images/page/all_films/${imgPath}`;
                 }
                 cursorImg.style.opacity = '1';
             });

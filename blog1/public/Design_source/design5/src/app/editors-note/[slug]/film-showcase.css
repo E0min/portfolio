@@ -1,0 +1,630 @@
+/* film_showcase.css – Film Showcase Pages (Synchronized with Original) */
+
+/* ===== 1. Hero Section ===== */
+.showcase-hero {
+    position: relative;
+    width: 100%;
+    height: 66.6667vw; /* 1280px */
+    overflow: hidden;
+}
+
+.showcase-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== 2. Hero Overlay ===== */
+.showcase-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.showcase-hamburger {
+    position: absolute;
+    top: 3.6979vw; /* 71px */
+    left: 3.6979vw;
+    width: 2.5vw; /* 48px */
+    height: 2.4479vw; /* 47px */
+    border: 1px solid rgba(252, 230, 24, 0.39);
+    border-radius: 0.3125vw; /* 6px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5208vw; /* 10px */
+    cursor: pointer;
+}
+
+.showcase-hamburger span {
+    display: block;
+    width: 1.6667vw; /* 32px */
+    height: 1px;
+    background: #FCE618;
+}
+
+.showcase-site-title {
+    position: absolute;
+    top: 2.5vw; /* 48px */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 2.5vw; /* 48px */
+    font-weight: 300;
+    color: #FCE618;
+    text-decoration: underline;
+    text-underline-offset: 0.2604vw;
+}
+
+.showcase-nav {
+    position: absolute;
+    top: 10.6771vw; /* 205px */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5625vw; /* 30px */
+}
+
+.showcase-nav a {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.9375vw; /* 18px */
+    font-weight: 400;
+    color: #FCE618;
+    text-decoration: none;
+}
+
+.showcase-movie-title {
+    position: absolute;
+    left: 2.1354vw; /* 41px */
+    top: 14.8958vw; /* 286px */
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 12.5vw; /* 240px */
+    color: #FCE618;
+    font-weight: 400; /* Regular weight */
+    line-height: 0.88;
+    letter-spacing: -0.75vw; /* -14.4px */
+    margin: 0;
+}
+
+.showcase-year {
+    position: absolute;
+    left: 2.1875vw; /* 42px */
+    top: 39.3229vw; /* 755px */
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 0.7813vw; /* 15px */
+    color: #FCE618;
+    letter-spacing: 0.1094vw; /* 2.1px */
+}
+
+.showcase-hero-wishlist {
+    position: absolute;
+    left: 4.8438vw; /* 93px */
+    top: 61.7188vw; /* 1185px */
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5208vw;
+}
+
+.showcase-hero-wishlist .hero-heart {
+    font-size: 4.0104vw; /* 77px */
+    color: #FCE618;
+}
+
+.showcase-hero-wishlist .wishlist-text {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 1.5104vw; /* 29px */
+    color: rgba(252, 230, 24, 0.98);
+    letter-spacing: -0.0906vw; /* -1.74px */
+    line-height: 1.15;
+}
+
+/* ===== 3. Info Section ===== */
+.showcase-info {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10.8333vw; /* 208px gap after hero */
+    padding-left: 2.6042vw; /* 50px from content-wrapper left */
+}
+
+.info-poster {
+    width: 24.4792vw; /* 470px */
+    flex-shrink: 0;
+    margin-top: 0.3125vw; /* 6px below labels */
+}
+
+.info-poster img {
+    width: 100%;
+    height: 36.25vw; /* 696px */
+    object-fit: cover;
+    border-radius: 0.4688vw; /* 9px */
+    opacity: 0.66;
+}
+
+.info-synopsis {
+    margin-left: 5.8854vw; /* 113px gap */
+    width: 24.1146vw; /* 463px */
+    flex-shrink: 0;
+}
+
+.info-details {
+    margin-left: 7.7083vw; /* 148px gap */
+    width: 24.1146vw; /* 463px */
+    flex-shrink: 0;
+}
+
+.info-label {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.8854vw; /* 17px */
+    font-weight: 400;
+    color: #000;
+    display: block;
+}
+
+.info-divider {
+    width: 100%;
+    height: 0.5px;
+    background: #000;
+    margin: 1.8229vw 0 2.2396vw; /* 35px top, 43px bottom */
+}
+
+.info-text {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.3021vw; /* 25px */
+    font-weight: 300;
+    color: #000;
+    line-height: 1.37;
+    margin: 0;
+}
+
+/* Awards sub-block */
+.awards-block {
+    margin-top: 1.0417vw; /* small gap after synopsis text */
+}
+
+.awards-block .info-label {
+    margin-bottom: 0;
+}
+
+.awards-divider {
+    width: 9.5313vw; /* 183px */
+    height: 0.5px;
+    background: #000;
+    margin: 1.8229vw 0 1.3021vw;
+}
+
+.cannes-icon {
+    width: 3.0729vw; /* 59px */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 0.5208vw;
+}
+
+.awards-festival {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.8854vw; /* 17px */
+    font-weight: 400;
+    color: #000;
+    display: block;
+    margin-bottom: 0.2604vw;
+}
+
+.awards-prize {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.3021vw; /* 25px */
+    font-weight: 300;
+    color: #000;
+}
+
+/* Details Column */
+.detail-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.2917vw; /* 44px */
+}
+
+.detail-group.starring {
+    margin-top: 1.7188vw; /* extra 33px gap before starring */
+}
+
+.detail-label {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.8854vw; /* 17px */
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 0.2604vw;
+}
+
+.detail-value {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.3021vw; /* 25px */
+    font-weight: 300;
+    color: #000;
+    line-height: 1.37;
+}
+
+/* ===== 4. Full-width Scene ===== */
+.showcase-scene {
+    margin-top: 13.4375vw; /* 258px gap */
+    width: calc(100% + 2.0834vw);
+    margin-left: -1.0417vw;
+}
+
+.showcase-scene img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== 5. Director Spotlight ===== */
+.showcase-director {
+    margin-top: 11.1458vw; /* 214px gap */
+    width: calc(100% + 2.0834vw);
+    margin-left: -1.0417vw;
+    display: flex;
+    height: 78.4896vw; /* 1507px */
+}
+
+.director-photo {
+    width: 50.0521vw; /* 961px */
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 0.4688vw 0 0 0.4688vw; /* rounded tl/bl */
+}
+
+.director-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.director-info {
+    flex: 1;
+    background: #FCE618;
+    border-radius: 0 0.4688vw 0.4688vw 0; /* rounded tr/br */
+    padding: 28.8021vw 2.0833vw 5.2083vw 4.5313vw;
+}
+
+.director-role {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.0417vw; /* 20px */
+    font-weight: 400;
+    color: #1E1E1E;
+    letter-spacing: 0.0417vw; /* 0.8px */
+    display: block;
+    margin-bottom: 0.5208vw;
+}
+
+.director-name {
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 12.5vw; /* 240px */
+    font-weight: 400; /* Regular weight */
+    color: #1E1E1E;
+    line-height: 0.85;
+    letter-spacing: -0.75vw; /* -14.4px */
+    margin: 0 0 1.5625vw -1.3542vw;
+}
+
+.director-quote {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.0417vw; /* 20px */
+    font-weight: 300; /* Lighter than before */
+    color: #1E1E1E;
+    letter-spacing: 0.0417vw; /* 0.8px */
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ===== 6. Gallery ===== */
+.showcase-gallery {
+    margin-top: 7.3438vw; /* 141px gap */
+}
+
+.gallery-header {
+    display: flex;
+    align-items: center;
+    gap: 1.0417vw;
+    margin-bottom: 2.6042vw;
+    padding-left: 1.1458vw; /* 22px */
+}
+
+.gallery-title {
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 3.2292vw; /* 62px */
+    font-weight: 400; /* Regular weight */
+    color: #000;
+    margin: 0;
+}
+
+.gallery-arrow {
+    width: 5.9896vw; /* 115px */
+    height: auto;
+    transform: rotate(-90deg);
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 0.2604vw; /* ~5px */
+}
+
+.gallery-item {
+    position: relative;
+    width: 52.0833vw; /* 1000px */
+    height: 28.1771vw; /* 541px */
+    border-radius: 0.4688vw; /* 9px */
+    overflow: hidden;
+    box-shadow: 0 0.2083vw 0.2083vw rgba(0, 0, 0, 0.25);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-wishlist {
+    position: absolute;
+    bottom: 1.1458vw;
+    left: 5.0521vw; /* 97px */
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5208vw;
+}
+
+.gallery-wishlist i {
+    font-size: 4.0104vw; /* 77px */
+    color: #fff;
+}
+
+.gallery-wishlist-text {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 1.5104vw; /* 29px */
+    color: #fff;
+    letter-spacing: -0.0906vw;
+    line-height: 1.15;
+}
+
+.gallery-expand {
+    position: absolute;
+    bottom: 2.6563vw;
+    left: 0.5208vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5208vw;
+}
+
+.gallery-expand i {
+    font-size: 4.0104vw;
+    color: #fff;
+}
+
+.expand-text {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.4583vw; /* 28px */
+    font-weight: 300;
+    color: #fff;
+}
+
+/* ===== 7. Film List ===== */
+.showcase-film-list {
+    margin-top: 5.2083vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-text-list {
+    list-style: none;
+    margin-bottom: 2.0833vw;
+}
+
+.showcase-text-list li {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 8.0729vw; /* 155px */
+    font-weight: 400; /* Changed from 500 to Regular */
+    line-height: 0.9;
+    color: #2B2929;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.0417vw;
+    cursor: pointer;
+    transition: color 0.2s;
+    position: relative;
+    z-index: 2;
+}
+
+.showcase-text-list li:hover {
+    color: #000;
+}
+
+.showcase-film-list .list-hover-img {
+    position: absolute;
+    top: 50%;
+    right: 1.0417vw;
+    transform: translateY(-50%);
+    width: 57.2917vw;
+    height: auto;
+    aspect-ratio: 1100 / 860;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.showcase-film-list .list-hover-img .hover-preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+}
+
+.showcase-text-list li sup {
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 1.2500vw; /* 24px */
+    font-weight: 400;
+    color: #2B2929;
+    vertical-align: super;
+    margin-left: 0.5208vw;
+    letter-spacing: 0.175vw; /* 3.36px */
+}
+
+.showcase-show-more {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.8750vw; /* 36px */
+    font-weight: 500;
+    margin-top: 1.5625vw;
+    cursor: pointer;
+    color: #2B2929;
+    display: flex;
+    align-items: center;
+    gap: 0.5208vw;
+}
+
+.showcase-show-more .show-more-arrow {
+    width: 2.0313vw;
+    height: auto;
+}
+
+/* ===== 8. About Section Overrides ===== */
+.about-card h4 {
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 1.25vw; /* 24px */
+    font-weight: 400;
+    letter-spacing: 0.1125vw; /* 2.16px */
+}
+
+.about-card .card-bottom a {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.8333vw; /* 16px */
+    font-weight: 400;
+    color: #000;
+    letter-spacing: 0.075vw; /* 1.44px */
+}
+
+/* ===== 9. Footer Film Info ===== */
+.footer-film-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 2.0833vw;
+    right: 2.0833vw;
+}
+
+.footer-film-title {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.6771vw; /* 13px */
+    font-weight: 500;
+    line-height: 1;
+}
+
+.footer-film-detail {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.7292vw; /* 14px */
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 0.2604vw;
+}
+
+/* ===== 10. Themes (Pink, Navy, Blue, Red, Slate) ===== */
+.theme-pink .showcase-hamburger { border-color: rgba(236, 113, 218, 0.39); }
+.theme-pink .showcase-hamburger span { background: #EB3DF7; }
+.theme-pink .showcase-site-title { color: #334671; }
+.theme-pink .showcase-nav a { color: #334671; }
+.theme-pink .showcase-movie-title { color: #EB3DF7; }
+.theme-pink .showcase-year { color: #EB3DF7; }
+.theme-pink .showcase-hero-wishlist .hero-heart { color: #AA0C1C; }
+.theme-pink .showcase-hero-wishlist .wishlist-text { color: #AA0C1C; }
+.theme-pink .director-info { background: #EC71DA; }
+.theme-pink .gallery-wishlist i { color: #AA0C1C; }
+.theme-pink .gallery-wishlist-text { color: #AA0C1C; }
+.theme-pink .footer-film-info .footer-film-title,
+.theme-pink .footer-film-info .footer-film-detail { color: #EB3DF7; }
+
+.theme-navy .showcase-hamburger { border-color: rgba(28, 40, 84, 0.39); }
+.theme-navy .showcase-hamburger span { background: #1C2854; }
+.theme-navy .showcase-site-title { color: #1C2854; }
+.theme-navy .showcase-nav a { color: #1C2854; }
+.theme-navy .showcase-movie-title { color: #1C2854; }
+.theme-navy .showcase-year { color: #1C2854; }
+.theme-navy .showcase-hero-wishlist .hero-heart { color: #FCE618; }
+.theme-navy .showcase-hero-wishlist .wishlist-text { color: #FCE618; }
+.theme-navy .director-info { background: #334671; }
+
+/* Info scroll arrow */
+.info-scroll-arrow {
+    display: block;
+    width: 5.9896vw;
+    height: auto;
+    margin: 2.9167vw auto 0;
+    transform: rotate(-90deg);
+}
+
+.academy-award-icon {
+    width: 1.4583vw;
+    height: 1.6146vw;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 0.5208vw;
+}
+
+.awards-detail {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.0417vw;
+    font-weight: 300;
+    color: #000;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 1.5625vw;
+}
+
+.awards-divider-full {
+    width: 100%;
+    height: 0.5px;
+    background: #000;
+    margin: 1.8229vw 0 1.3021vw;
+}
+
+.rating-img {
+    width: 3.8021vw;
+    height: 2.5521vw;
+    object-fit: contain;
+    display: block;
+}
+
+.hero-decorative-arrow {
+    position: absolute;
+    left: 62.5521vw;
+    top: 26.3021vw;
+    width: 5.8333vw;
+    height: auto;
+}
+
+/* Scene quote overlay */
+.showcase-scene-wrapper {
+    position: relative;
+}
+
+.scene-quote {
+    position: absolute;
+    left: 34.0104vw;
+    top: 36.1458vw;
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 3.0208vw;
+    font-weight: 300; /* Adjusted to be lighter/regular */
+    color: #F2ECEB;
+    letter-spacing: -0.0604vw;
+    line-height: 1.1;
+}

@@ -1,7 +1,8 @@
 ---
 title: "Dankook Univ. ID Card"
 description: "단국대학교 학생증 카드 디자인 공모전 제출작"
-image: "/Design_Gallery/Design7.svg"
+image: "/Design_Gallery/Design7.png"
+date: "2023-11-20"
 hide_title_image: true
 
 ---
@@ -12,7 +13,7 @@ hide_title_image: true
 
 ## Design Assets
 
-![Final Design](/Design_Gallery/Design7.svg)
+![Final Design](/Design_Gallery/Design7.png)
 
 
 ## 디자인 컨셉

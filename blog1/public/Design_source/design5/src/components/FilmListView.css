@@ -1,0 +1,73 @@
+/* Film List View Styles */
+
+.list-view-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 50vh;
+}
+
+.list-row {
+    display: flex;
+    align-items: center;
+    padding: 1.5625vw 0; /* 30px */
+    border-bottom: 1px solid #ECECEC;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.list-col.title {
+    min-width: 54.8958vw; /* 1054px */
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 2.6042vw; /* 50px */
+    font-weight: 600;
+    letter-spacing: -0.2865vw;
+    color: #000;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.list-col.meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2604vw;
+}
+
+.list-col.meta .label {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.6771vw; /* 13px */
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.0339vw;
+}
+
+.list-col.meta .value {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.9896vw; /* 19px */
+    font-weight: 300;
+    color: #000;
+    letter-spacing: 0.0495vw;
+}
+
+/* ===== Cursor Follow Image ===== */
+#cursor-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10.4167vw; /* 200px */
+    z-index: 9000;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+}
+
+#cursor-img .cursor-poster-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.2604vw; /* 5px */
+    box-shadow: 0 0.4167vw 1.0417vw rgba(0, 0, 0, 0.3);
+}

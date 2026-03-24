@@ -1,0 +1,451 @@
+.section-header {
+    padding: 2.6042vw 1.0417vw 0 1.0417vw;
+    /* 50px top padding */
+    background: #fff;
+    margin-bottom: 2.0833vw;
+}
+
+/* Copied from all_films.css for "Upcoming" header match - Moved to top for priority */
+.section-subtitle {
+    font-family: var(--font-oswald), sans-serif !important;
+    font-size: 6.6667vw;
+    font-weight: 500;
+    margin-bottom: 1.0417vw;
+    color: #EB3DF7;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3.1250vw;
+    gap: 4.4792vw;
+}
+
+/* Custom Cursor Override for Collections */
+.custom-cursor {
+    background-image: url('/images/svg/cursor_green.svg');
+}
+
+.site-title {
+    font-family: var(--font-oswald), sans-serif;
+    color: #90FC82;
+    /* requested green */
+    font-size: 2.5000vw;
+    font-weight: 300;
+    text-decoration: underline;
+    text-underline-offset: 0.2604vw;
+    padding: 0 0 1.0417vw 0;
+    /* Removed top padding */
+}
+
+.mini-nav {
+    display: flex;
+    gap: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.top-nav:hover .mini-nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mini-nav a {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: #90FC82;
+    /* requested green */
+    text-decoration: none;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* Collections Page Styles */
+
+/* Header Override for SVG Title */
+.page-title-svg-collections {
+    width: 49.2188vw;
+    /* 945px */
+    height: auto;
+    margin: 0;
+    display: block;
+}
+
+.scroll-arrow-down {
+    position: absolute;
+    top: 50%;
+    /* Adjust */
+    right: 33%;
+    transform: translateY(-50%);
+}
+
+.header-sub {
+    position: relative;
+    /* Keep relative for specific adjustments if needed, but in flow */
+    margin-top: 14vw;
+    /* Approx gap to reach ~673px top (42.0625rem) from document start, considering nav height */
+    margin-left: 2.6042vw;
+    /* 50px (3.125rem) */
+    width: 26.0938vw;
+    /* 501px (31.3125rem) */
+    /* height: 9.8958vw; User requested 190px, but auto is safer for SVG ratios. If forced: */
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+    margin-bottom: 4vw;
+    /* Add space below it so it doesn't crowd Hero */
+}
+
+.header-sub-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.collections-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7.8125vw;
+    /* 150px gap between rows */
+    margin-bottom: 7.8125vw;
+}
+
+.collection-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    /* Side padding handled by content-wrapper (20px) */
+    gap: 2.6042vw;
+}
+
+.collection-row.reverse {
+    flex-direction: row-reverse;
+    /* Replaces just swapping div order in HTML if inconsistent but I used DOM order. */
+    /* If DOM order is maintained as Img Left in HTML for reverse rows, this isn't needed unless we strictly use row-reverse.
+       I structured HTML as Img Left for reverse rows, so flex-direction can stay row.
+       But standardizing HTML and using CSS for order is often better. structure in HTML reflects visual order creates less confusion.
+    */
+}
+
+.col-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col-image {
+    width: 46.0417vw;
+    /* 884px at 1920px */
+    flex: 0 0 auto;
+    /* Images are larger */
+    /* Removed fixed height to allow natural aspect ratio */
+    /* height: 31.2500vw; */
+    /* background-color: #000; */
+    /* overflow: hidden; */
+}
+
+.col-image .collection-img {
+    width: 100%;
+    height: auto;
+    /* Changed from 100% to auto */
+    /* object-fit: cover; */
+    display: block;
+}
+
+.col-kicker {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.7292vw;
+    /* 14px */
+    color: #999;
+    margin-bottom: 1.0417vw;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.col-title {
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-weight: 160;
+    font-size: 8.3333vw;
+    /* 160px */
+    line-height: 7.2917vw;
+    /* 140px */
+    color: #2B2929;
+    /* Updated color from Figma */
+    margin-bottom: 1.5625vw;
+}
+
+.col-title.align-right {
+    text-align: right;
+}
+
+.col-text.right {
+    align-items: flex-end;
+}
+
+.read-more {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.8333vw;
+    /* 16px */
+    color: #000;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5208vw;
+    text-transform: uppercase;
+    margin-top: 1.0417vw;
+}
+
+.read-more .arrow {
+    font-size: 1vw;
+}
+
+.icon {
+    font-family: serif;
+    /* Just for the flower symbol */
+    vertical-align: middle;
+}
+
+/* Custom Cursor Override for Collections */
+.custom-cursor {
+    background-image: url('/images/svg/cursor_green.svg');
+}
+
+/* Fix font size and image size below 1400px */
+@media (max-width: 1400px) {
+    .col-title {
+        font-size: 116.67px;
+        line-height: 102.08px;
+    }
+
+    .col-image {
+        /* Calculated based on user reference: 884px width at 1920px */
+        /* Ratio = 884/1920 = 0.46041667 */
+        /* At 1400px: 1400 * 0.46041667 = 644.58px */
+        flex: 0 0 644.58px;
+        width: 644.58px;
+        min-width: 644.58px;
+        aspect-ratio: 884 / 730;
+    }
+}
+
+/* --- Sean Baker Detail Page Styles --- */
+
+.sb-header-title {
+    width: 100vw;
+    /* Full viewport width */
+    margin-left: -1.0417vw;
+    /* Counteract wrapper margin */
+    margin-bottom: 2vw;
+    padding: 0;
+    line-height: 0;
+    /* Remove extra space below image */
+}
+
+.sb-header-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sb-title-main {
+    font-family: var(--font-bebas-neue), sans-serif;
+    /* Or Oswald based on look */
+    font-size: 8vw;
+    line-height: 0.8;
+    color: #111;
+    margin: 0;
+}
+
+.sb-title-sub {
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 5vw;
+    color: #F05AF6;
+    /* Pink */
+    margin: 0;
+    line-height: 1;
+}
+
+.sb-hero-section {
+    display: flex;
+    width: 100%;
+    margin-bottom: 4vw;
+}
+
+.sb-hero-portrait {
+    flex: 1;
+    width: 50%;
+}
+
+.sb-hero-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 0.4688vw;
+    /* 9px */
+    border-bottom-left-radius: 0.4688vw;
+}
+
+.sb-hero-info {
+    flex: 1;
+    width: 50%;
+    background-color: #EC71DA;
+    /* Updated Pink */
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-top-right-radius: 0.4688vw;
+    /* 9px */
+    border-bottom-right-radius: 0.4688vw;
+}
+
+.sb-info-role {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.0417vw;
+    /* 20px */
+    margin-bottom: 1.6667vw;
+    /* ~32px adjustments */
+    letter-spacing: 0.8px;
+    color: #1E1E1E;
+}
+
+.sb-info-name {
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 12.5vw;
+    /* 240px */
+    line-height: 0.85;
+    margin-bottom: 2.2917vw;
+    /* Spacing for quote */
+    color: #1E1E1E;
+    letter-spacing: -0.06em;
+    /* -14.4px */
+}
+
+.sb-info-quote {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.0417vw;
+    /* 20px */
+    line-height: 1.4;
+    max-width: 80%;
+    color: #1E1E1E;
+}
+
+.sb-film-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns based on screenshot: Starlet(L), Florida(R-Top), Tangerine(R-Bottom)? No, look at screenshot. */
+    /* Screenshot: 
+       Row 1: Left: Starlet (1/3), Middle: Low Florida (1/3), Right: Tangerine (Tall 1/3)?
+       Actually standard 3 col grid?
+    */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5vw;
+}
+
+.sb-grid-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.sb-grid-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5vw;
+}
+
+.sb-grid-caption {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.6667vw;
+    /* 32px at 1920px */
+    font-weight: 300;
+    color: #000;
+    font-style: normal;
+    margin-top: 0.5vw;
+}
+
+@media (max-width: 1400px) {
+    .sb-grid-caption {
+        font-size: 23.33px;
+        /* Rigid at 1400px scale */
+    }
+}
+
+/* --- Masonry Grid Styles (Copied from all_films.css for reuse) --- */
+.hotgirls-three-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5.2083vw;
+    padding: 0;
+    gap: 1.0417vw;
+}
+
+.hg-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0417vw;
+    flex: 534;
+    /* Ratio based on width */
+    min-width: 0;
+    /* Prevent flex blowout */
+}
+
+.hg-col.center {
+    flex: 775;
+    /* Ratio based on width */
+}
+
+.hg-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Aspect Ratio helpers - Overridden to use natural image ratio as requested */
+.portrait-tall {
+    aspect-ratio: auto;
+    height: auto;
+}
+
+.landscape {
+    aspect-ratio: auto;
+    height: auto;
+}
+
+.hg-col.center .landscape {
+    aspect-ratio: auto;
+}
+
+.hg-item img {
+    width: 100%;
+    height: auto;
+    /* Uses original image ratio */
+    object-fit: contain;
+    /* Ensures full image is visible if container constrained, though height:auto handles it */
+    display: block;
+    border-radius: 9px;
+    /* Added border radius */
+}
+
+.hg-caption {
+    position: absolute;
+    bottom: 0.5208vw;
+    left: 0.5208vw;
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.6250vw;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.1042vw 0.2604vw;
+}

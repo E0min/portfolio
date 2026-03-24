@@ -23,9 +23,11 @@ export default function DesignPage() {
                     slug,
                     title: data.title,
                     description: data.description,
-                    image: data.image
+                    image: data.image,
+                    date: data.date || "2024" // Added for sorting
                 };
-            });
+            })
+            .sort((a, b) => (b.date > a.date ? 1 : -1)); // Newest first
     }
 
     return (

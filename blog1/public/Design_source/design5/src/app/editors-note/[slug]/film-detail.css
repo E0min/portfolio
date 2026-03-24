@@ -1,0 +1,230 @@
+/* film_detail.css - Editor's Note (Synchronized with Original) */
+
+/* ===== 1. Hero Section ===== */
+.editor-hero {
+    position: relative;
+    width: 100%;
+    height: 40.3646vw; /* 775px */
+    overflow: hidden;
+}
+
+.editor-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== 2. Overlay Header ===== */
+.editor-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hamburger-btn {
+    position: absolute;
+    top: 3.6979vw; /* 71px */
+    left: 3.75vw; /* 72px */
+    width: 2.5vw; /* 48px */
+    height: 2.4479vw; /* 47px */
+    border: 1px solid rgba(255, 255, 255, 0.39);
+    border-radius: 0.3125vw; /* 6px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5208vw; /* 10px */
+    cursor: pointer;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 1.6667vw; /* 32px */
+    height: 1px;
+    background: #fff;
+}
+
+.editor-site-title {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 2.5vw; /* 48px */
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10.7813vw; /* 207px */
+}
+
+.editor-nav {
+    display: flex;
+    gap: 1.5625vw; /* 30px */
+    margin-top: 0.5208vw; /* 10px below site title */
+}
+
+.editor-nav a {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.9375vw; /* 18px */
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ===== 3. Article ===== */
+.editor-article {
+    margin-top: 3.6458vw; /* ~70px gap after hero */
+}
+
+/* Article Header */
+.article-header {
+    padding-left: 17.2396vw;
+}
+
+.article-date {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.25vw; /* 24px */
+    font-weight: 300;
+    color: #8e8d8b;
+    display: block;
+    margin-bottom: 0.5208vw;
+}
+
+.article-title {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 5vw; /* 96px */
+    font-weight: 300;
+    color: #000;
+    line-height: 1;
+    margin-bottom: 1.5625vw; /* 30px */
+}
+
+.article-title .bold {
+    font-weight: 400; /* Regular weight instead of 700 */
+}
+
+.article-meta-row {
+    display: flex;
+    align-items: baseline;
+    gap: 5.7292vw;
+}
+
+.article-share {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.0417vw; /* 20px */
+    font-weight: 400;
+    color: #8e8d8b;
+    letter-spacing: 0.1979vw; /* 3.8px */
+}
+
+.article-author {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.7813vw; /* 15px */
+    font-weight: 300;
+    color: #8e8d8b;
+}
+
+/* Article Body */
+.article-body {
+    padding-left: 22.9688vw;
+    margin-top: 3.6458vw;
+}
+
+.article-body p {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.5104vw; /* 29px */
+    font-weight: 300;
+    color: #000;
+    line-height: 1.4;
+    margin-bottom: 1.5625vw;
+    max-width: 53.8542vw;
+}
+
+/* Korean body text variant */
+.article-body-kr p {
+    font-family: var(--font-oswald), var(--font-noto-kr), sans-serif;
+    font-size: 1.25vw; /* 24px */
+    font-weight: 400;
+}
+
+/* Article Images */
+.article-image {
+    margin: 2.6042vw 0;
+    margin-left: 0.4167vw;
+}
+
+.article-image img {
+    width: 52.2917vw;
+    height: auto;
+    display: block;
+}
+
+.article-signature {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.5104vw;
+    font-weight: 300;
+    margin-top: 1.0417vw;
+}
+
+.article-source {
+    margin-top: 3.125vw;
+    font-size: 1.5104vw;
+    font-weight: 300;
+    color: #000;
+}
+
+.article-source a {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* ===== 4. About Section Overrides ===== */
+.editor-article + .section.about {
+    margin-top: 5.2083vw;
+}
+
+.about-card h4 {
+    font-family: var(--font-bebas-neue), sans-serif;
+    font-size: 1.25vw;
+    letter-spacing: 0.1125vw;
+}
+
+.about-card .card-bottom a {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.8333vw;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: 0.075vw;
+}
+
+/* ===== 5. Footer Film Info ===== */
+.footer-film-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 2.0833vw;
+    right: 2.0833vw;
+}
+
+.footer-film-title {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.6771vw;
+    font-weight: 500;
+    color: #AA0C1C;
+    line-height: 1;
+}
+
+.footer-film-detail {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 0.7292vw;
+    font-weight: 500;
+    color: #AA0C1C;
+    line-height: 1;
+    margin-top: 0.2604vw;
+}
+
+.main-footer {
+    position: relative;
+}
